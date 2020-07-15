@@ -11,6 +11,48 @@ a:link,a:visited{
 a:hover{
  text-decoration:underline; 
 }
+		*{ 
+margin: 0; 
+padding: 0; 
+} 
+#test{ 
+position: relative; 
+width: 300px; 
+height: 200px; 
+overflow: hidden; 
+border: 1px solid #d4d4d4; 
+} 
+#test ul{ 
+position: absolute; 
+top:0; 
+left: 0; 
+height:200px; 
+} 
+#test ul li{ 
+float: left; 
+width: 300px; 
+height:200px; 
+} 
+@-webkit-keyframes myAnimation{ 
+0%{ 
+top:0; 
+} 
+40%{ 
+top:-200px; 
+} 
+70%{ 
+top:-400px; 
+} 
+100%{ 
+top:-600px; 
+} 
+} 
+#test ul{ 
+-webkit-animation-name:myAnimation; 
+-webkit-animation-duration:20s; 
+-webkit-animation-timing-function:linear; 
+-webkit-animation-iteration-count:infinite; 
+} 
 </style>
 <title>skyfly（翔哥）的家园</title>
  <meta name=“Description” content=“这里是我分享个人履历和知识的无名小站” />
