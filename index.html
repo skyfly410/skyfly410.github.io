@@ -5,54 +5,6 @@
  <link rel="icon" href="http://demo.sc.chinaz.com/Files/pic/iconsico/dm_117/eva_53.ico" type="image/x-icon"/>
  <meta charset="utf-8">
 	<style type="text/css">
-a:link,a:visited{
- text-decoration:none; 
-}
-a:hover{
- text-decoration:underline; 
-}
-		*{ 
-margin: 0; 
-padding: 0; 
-} 
-#test{ 
-position: relative; 
-width: 300px; 
-height: 200px; 
-overflow: hidden; 
-border: 1px solid #d4d4d4; 
-} 
-#test ul{ 
-position: absolute; 
-top:0; 
-left: 0; 
-height:200px; 
-} 
-#test ul li{ 
-float: left; 
-width: 300px; 
-height:200px; 
-} 
-@-webkit-keyframes myAnimation{ 
-0%{ 
-top:0; 
-} 
-40%{ 
-top:-200px; 
-} 
-70%{ 
-top:-400px; 
-} 
-100%{ 
-top:-600px; 
-} 
-} 
-#test ul{ 
--webkit-animation-name:myAnimation; 
--webkit-animation-duration:5s; 
--webkit-animation-timing-function:linear; 
--webkit-animation-iteration-count:infinite; 
-} 
 </style>
 <title>skyfly（翔哥）的家园</title>
  <meta name=“Description” content=“这里是我分享个人履历和知识的无名小站” />
@@ -118,16 +70,24 @@ div{
 <br>
 	<br>
 	<br>
-		<div id="test"> 
-<ul> 
-<li><img width="300" height="200" src="http://imgsrc.baidu.com/forum/w=580/sign=0d25c85f8594a4c20a23e7233ef51bac/b752f744ad345982691accc20ef431adcaef8459.jpg" alt="" /></li> 
-<li><img width="300" height="200" src="https://s1.ax1x.com/2020/06/29/NW1Uds.jpg" alt="" /></li> 
-<li><img width="300" height="200" src="image/3.jpg" alt="" /></li> 
-<li><img width="300" height="200" src="image/4.jpg" alt="" /></li> 
-</ul> 
-</div> 
-		
-		
+		<div class="banner" id="banner">
+			<div class="bannarimg active" id="banner1">
+				<img src="http://imgsrc.baidu.com/forum/w=580/sign=0d25c85f8594a4c20a23e7233ef51bac/b752f744ad345982691accc20ef431adcaef8459.jpg">
+			</div>
+			<div class="bannarimg" id="banner2">
+				<img src="https://s1.ax1x.com/2020/06/29/NW1Uds.jpg">
+			</div>
+			<div class="bannarimg" id="banner3">
+				<img src="images/3.jpg">
+			</div>
+		</div>
+		<a href="javascript:void(0)" class="button next" id="button1"></a>
+		<a href="javascript:void(0)" class="button last" id="button2"></a>
+		<div class="dots" id="dots">
+			<span class="active"></span>
+			<span></span>
+			<span></span>
+		</div>	
 	<br>	
 <center><h1>个 人 简 介</h1></center>
 <center><p>可以叫我阿翔、翔哥、天翔，欢迎围观捧场！！！</p></center>
