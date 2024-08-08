@@ -121,7 +121,7 @@
 .dvslider-count span {
   margin: 0 2px;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 300px) {
   /* 在小屏幕设备上的样式 */
   img {
     width: 100%;
