@@ -101,6 +101,28 @@ var _hmt = _hmt || [];
 <!-- 本站已运用"百度统计"监测访问量-->
 </head>
 <body>
+	 <script>
+        // 定义滚动事件的回调函数
+        function handleScroll() {
+            console.log('当前滚动位置Y轴：', window.scrollY);
+            // 可以在这里添加更多的滚动处理逻辑
+        }
+
+        // 使用防抖技术来优化滚动事件的处理
+        function debounce(func, wait) {
+            let timeout;
+            return function() {
+                const context = this, args = arguments;
+                clearTimeout(timeout);
+                timeout = setTimeout(() => func.apply(context, args), wait);
+            };
+        }
+
+        const debouncedHandleScroll = debounce(handleScroll, 200);
+
+        // 给window对象添加滚动事件监听器
+        window.addEventListener('scroll', debouncedHandleScroll);
+    </script>
 	<div class="nav" id="content">
  <ul>
 <center> <li><a href="index.html">首 页</a></li>
