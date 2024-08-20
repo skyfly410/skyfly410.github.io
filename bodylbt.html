@@ -143,14 +143,6 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
   </script>
 	</head> 
         <body>
-<!-- 长按操作禁用脚本 -->
-  <script>
-    document.querySelectorAll('img').forEach(img => {
-      img.addEventListener('touchend', function(event) {
-       event.preventDefault();
-      }
-      });
-  </script>
 		<br>
 		<br>
 		<br>
@@ -186,5 +178,13 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
 		<hr>
 		<center><a href="jszc.html"><hl>skyfly  版权所有</hl></a></center>
 		<br>
+<!-- 长按操作禁用脚本 -->
+  <script>
+    document.querySelectorAll('img').forEach(img => {
+      img.addEventListener('touchend', function(event) {
+        // ... 同上
+      });
+    });
+  </script>
 </body>
 </html>
