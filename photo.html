@@ -80,6 +80,25 @@ div{
 			}
 	.change-color {
   color: red;
+		.image-container {
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.image-container .text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: white; /* 文字颜色，可以根据背景调整 */
+  background-color: rgba(0, 0, 0, 0.5); /* 背景半透明，根据需要调整 */
+  width: 100%;
+  text-align: center;
+  padding: 10px; /* 内边距，根据需要调整 */
+}
 		</style>
 </head>
 <body>
@@ -98,7 +117,10 @@ div{
 		<br>
 		<br>
 		<center>
-<h3><a href="bodylbt.html"><img src="https://s21.ax1x.com/2024/08/12/pAplOwF.jpg" alt="本人形象" width="150" height="145">❤本人形象</a></h3>
+<div class="image-container">
+  <img src="https://s21.ax1x.com/2024/08/12/pAplOwF.jpg" alt="本人形象" width="150" height="145">
+  <div class="text">❤本人形象</div>
+</div>
 			<br>
 		<br>
 <h3><a href="naturelbt.html"><img src="https://s21.ax1x.com/2024/08/12/pAplOwF.jpg" alt="旅拍风景" width="150" height="145">❤旅拍风景</a></h3>
