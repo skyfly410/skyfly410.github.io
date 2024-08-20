@@ -147,9 +147,9 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
   <script>
     document.querySelectorAll('img').forEach(img => {
       img.addEventListener('touchend', function(event) {
-        // ... 同上
+       event.preventDefault();
+      }
       });
-    });
   </script>
 		<br>
 		<br>
