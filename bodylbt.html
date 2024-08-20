@@ -180,10 +180,10 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
 		<br>
 <!-- 长按操作禁用脚本 -->
   <script>
-    document.querySelectorAll('img').forEach(img => {
-  img.addEventListener('contextmenu', function(event) {
-    event.preventDefault(); // 阻止默认的上下文菜单显示
-  }, false);
+    document.addEventListener('contextmenu', function(event) {
+  event.preventDefault();
+  event.stopPropagation();
+}, false);
 });
   </script>
 </body>
