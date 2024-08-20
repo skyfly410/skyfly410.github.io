@@ -181,10 +181,10 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
 <!-- 长按操作禁用脚本 -->
   <script>
     document.querySelectorAll('img').forEach(img => {
-      img.addEventListener('touchend', function(event) {
-        // ... 同上
-      });
-    });
+  img.addEventListener('contextmenu', function(event) {
+    event.preventDefault(); // 阻止默认的上下文菜单显示
+  }, false);
+});
   </script>
 </body>
 </html>
