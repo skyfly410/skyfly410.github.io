@@ -133,16 +133,24 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
 //    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
 //}
 </script>
-		 <style>
-    .no-select {
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-  </style>
+<!-- 右键菜单禁用脚本 -->
+  <script>
+    document.addEventListener('contextmenu', event => {
+      if (event.target.tagName === 'IMG') {
+        event.preventDefault();
+      }
+    });
+  </script>
 	</head> 
         <body>
+<!-- 长按操作禁用脚本 -->
+  <script>
+    document.querySelectorAll('img').forEach(img => {
+      img.addEventListener('touchend', function(event) {
+        // ... 同上
+      });
+    });
+  </script>
 		<br>
 		<br>
 		<br>
@@ -153,13 +161,13 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
 		<!-- 所有轮播图片宽300px，高450px-->
             <div class="dvslider">
                 <div class="dvslider-slider" style="width: 3000px; transition: all 0s linear 0s; transform: translate3d(-2400px, 0px, 0px);">
-                   <div class="dvslider-slide no-select" style="width: 600px;">
+                   <div class="dvslider-slide" style="width: 600px;">
                         <img src="https://s21.ax1x.com/2024/08/08/pkznisH.jpg">
                     </div>
-                    <div class="dvslider-slide no-select" style="width: 600px;">
+                    <div class="dvslider-slide" style="width: 600px;">
                         <img src="https://s21.ax1x.com/2024/08/08/pkznPQe.jpg">
                     </div>
-		    <div class="dvslider-slide no-select" style="width: 600px;">
+		    <div class="dvslider-slide" style="width: 600px;">
                         <img src="https://s21.ax1x.com/2024/08/17/pACfiBq.jpg">
                     </div>
                 </div>
