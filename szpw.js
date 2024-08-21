@@ -5,7 +5,7 @@ function validateAndRedirect() {
     var messageElement = document.getElementById('message');
 
     if (password === correctPassword) {
-        window.location.href = 'bmpic.html'; // 
+        window.location.href = 'https://skyfly410.github.io/bmpic.html'; // 
         return false; 
     } else {
         messageElement.textContent = '输入错误，请重试！';
