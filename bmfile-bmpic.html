@@ -45,14 +45,6 @@ div{
 }
 .change-color {
   color: red;
-.enlarge-image {
-    width: 300px; /* 初始图片宽度 */
-    transition: transform 0.5s ease; /* 平滑过渡效果 */
-    cursor: pointer; /* 鼠标悬停时显示手形图标 */
-  }
-  .enlarged {
-    transform: scale(2); /* 放大图片 */
-  }
 </style>
 <style type="text/css">
 			*
@@ -104,8 +96,8 @@ div{
 <br>
 		<center>
 <div style="display: flex;border:none; justify-content: center; align-items: center; flex-wrap: wrap;">
-<span style="margin: 50px;"><img src="https://s21.ax1x.com/2024/08/21/pAiurVS.jpg" class="enlarge-image" width="500" height="300"></span>
-<span style="margin: 50px;"><img src="https://s21.ax1x.com/2024/08/21/pAiucCj.jpg" class="enlarge-image" width="300" height="300"></span>
+<span style="margin: 50px;"><img src="https://s21.ax1x.com/2024/08/21/pAiurVS.jpg" width="500" height="300"></span>
+<span style="margin: 50px;"><img src="https://s21.ax1x.com/2024/08/21/pAiucCj.jpg" width="300" height="300"></span>
 </div>
 	<br>
 	<br>
@@ -115,12 +107,5 @@ div{
 <a href="jszc.html"><hl>skyfly  版权所有</hl></a>
 		</center>
 <br>
-<script>
-  const enlargeImage = document.querySelector('.enlarge-image');
-
-  enlargeImage.addEventListener('click', function() {
-    this.classList.toggle('enlarged');
-  });
-</script>
 </body>
 </html>
