@@ -1,6 +1,6 @@
 function validateAndRedirect() {
     var password = document.getElementById('password').value;
-    var correctPassword = "2018"; // 
+    var correctPassword = "2012"; // 
 
     var messageElement = document.getElementById('message');
 
