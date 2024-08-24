@@ -90,12 +90,12 @@ div{
       }
     });
   </script>
-<script>
-        // 假设这是你的密码验证函数
-        function verifyPassword() {
-            // 验证逻辑...
+<style>
+        /* 初始时隐藏受保护的内容 */
+        #protectedContent {
+            display: none;
         }
-</script>
+</style>
 </head>
 <body>
 	<div class="nav">
@@ -108,11 +108,12 @@ div{
 <li><a href="bmfile.html" class="change-color">秘 密 花 园</a></li></center>
 </ul>
 <br>
+		<div id="protectedContent" style="border:none;">
 		<center>
 <div style="display: flex;border:none; justify-content: center; align-items: center; flex-wrap: wrap;">
 <span style="margin: 50px;"><img src="https://s21.ax1x.com/2024/08/21/pAiurVS.jpg" width="500" height="300"></span>
 <span style="margin: 50px;"><img src="https://s21.ax1x.com/2024/08/21/pAiucCj.jpg" width="300" height="300"></span>
-</div>
+</div></div>
 	<br>
 	<br>
 	<br>
@@ -138,9 +139,19 @@ document.querySelectorAll('img').forEach(img => {
 });
   </script>
 </div>
-<script>
-        // 页面加载完毕后调用 verifyPassword 函数
-        verifyPassword();
-</script>
+ <script>
+        const storedPassword = '2012';
+        // 密码验证函数
+        function verifyPassword() {
+            var enteredPassword = document.getElementById('passwordInput').value;
+            if (enteredPassword === storedPassword) {
+                // 密码匹配，显示受保护的内容
+                document.getElementById('protectedContent').style.display = 'block';
+            } else {
+                // 密码不匹配，提示错误
+                alert('Incorrect password. Access denied.');
+            }
+        }
+    </script>
 </body>
 </html>
