@@ -90,6 +90,36 @@ div{
       }
     });
   </script>
+	 <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!isAuthenticated()) {
+                // 用户未认证，显示登录表单，隐藏内容
+                document.getElementById('content').style.display = 'none';
+                document.getElementById('loginForm').style.display = 'block';
+            } else {
+                // 用户已认证，显示内容
+                document.getElementById('content').style.display = 'block';
+            }
+        });
+
+        function authenticate() {
+            var password = document.getElementById('password').value;
+            if (password === 'yourCorrectPassword') { // 这里应比较密码哈希值
+                // 密码正确，存储认证状态
+                localStorage.setItem('authenticated', 'true');
+                document.getElementById('content').style.display = 'block';
+                document.getElementById('loginForm').style.display = 'none';
+                return true;
+            } else {
+                alert('密码错误');
+                return false;
+            }
+        }
+
+        function isAuthenticated() {
+            return localStorage.getItem('authenticated') === 'true';
+        }
+    </script>
 </head>
 <body>
 	<div class="nav">
@@ -131,5 +161,12 @@ document.querySelectorAll('img').forEach(img => {
   }, false);
 });
   </script>
+<div id="loginForm" style="display: none;">
+    <form onsubmit="return authenticate()">
+        <label for="password">输入密码:</label>
+        <input type="password" id="password" required>
+        <input type="submit" value="登录">
+    </form>
+</div>
 </body>
 </html>
