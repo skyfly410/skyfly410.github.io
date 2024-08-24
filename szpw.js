@@ -2,7 +2,7 @@ function validateAndRedirect() {
     var password = document.getElementById('password').value;
     var correctPassword = "2012"; 
     if (password === correctPassword) {
-        window.location.href = 'https://skyfly410.github.io/bmfile-bmpic.html'; 
+        window.location.href = 'bmfile-bmpic.html'; 
         return true;
     } else {
         alert('输入错误，请重试！');
