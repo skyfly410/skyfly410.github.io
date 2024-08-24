@@ -92,14 +92,6 @@ div{
   </script>
 </head>
 <body>
-	<script>
-function changeURL(event) {
-    event.preventDefault(); // 阻止链接的默认行为
-    window.history.pushState({}, '', 'bmfile.html');
-    // 这里可以加载新页面的内容，但不会重新加载整个页面
-}
-</script>
-	<a href="bmfile.html" onclick="changeURL(event)">
 	<div class="nav">
  <ul>
 <center><li><a href="index.html">首 页</a></li>
@@ -121,7 +113,7 @@ function changeURL(event) {
 	<br>
 <hr>
 <a href="jszc.html"><hl>skyfly  版权所有</hl></a>
-		</center></a>
+		</center>
 <!-- 长按操作禁用脚本 -->
   <script>
 document.querySelectorAll('img').forEach(img => {
