@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
 <head>
-<base href="https://skyfly410.github.io/your-base-path/">
  <link rel="icon" href="https://s21.ax1x.com/2024/08/05/pkv8xdH.png" type="image/png"/>
  <meta charset="utf-8">
 	<style type="text/css">
@@ -133,5 +132,12 @@ document.querySelectorAll('img').forEach(img => {
 });
   </script>
 </div>
+<script>
+function changeURL(event) {
+    event.preventDefault(); // 阻止链接的默认行为
+    window.history.pushState({}, '', 'https://skyfly410.github.io');
+    // 这里可以加载新页面的内容，但不会重新加载整个页面
+}
+</script>
 </body>
 </html>
