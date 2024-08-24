@@ -120,6 +120,35 @@ div{
             return localStorage.getItem('authenticated') === 'true';
         }
     </script>
+	<style>
+    button, input[type="submit"] {
+    padding: 10px 20px; /* 设置内边距 */
+    border: none; /* 移除边框 */
+    border-radius: 5px; /* 设置边框圆角 */
+    background-color: #007bff; /* 设置背景颜色 */
+    color: white; /* 设置文字颜色 */
+    font-size: 16px; /* 设置字体大小 */
+    cursor: pointer; /* 设置鼠标悬停时的光标形状 */
+}
+
+    button, input[type="reset"] {
+    padding: 10px 20px; /* 设置内边距 */
+    border: none; /* 移除边框 */
+    border-radius: 5px; /* 设置边框圆角 */
+    background-color: #007bff; /* 设置背景颜色 */
+    color: white; /* 设置文字颜色 */
+    font-size: 16px; /* 设置字体大小 */
+    cursor: pointer; /* 设置鼠标悬停时的光标形状 */
+}
+	
+    input[type="text"], input[type="password"] {
+    width: 200px; /* 设置宽度 */
+    padding: 10px; /* 添加内边距 */
+    border: 1px solid #ccc; /* 设置边框 */
+    border-radius: 5px; /* 设置边框圆角 */
+    font-size: 16px; /* 设置字体大小 */
+}
+</style>
 </head>
 <body>
 	<div class="nav">
@@ -132,8 +161,8 @@ div{
 <li><a href="bmfile.html" class="change-color">秘 密 花 园</a></li></center>
 </ul>
 <br>
-		<div id="content" style="display: none;">
 		<center>
+                <div id="content" style="display: none border:none;">
 <div style="display: flex;border:none; justify-content: center; align-items: center; flex-wrap: wrap;">
 <span style="margin: 50px;"><img src="https://s21.ax1x.com/2024/08/21/pAiurVS.jpg" width="500" height="300"></span>
 <span style="margin: 50px;"><img src="https://s21.ax1x.com/2024/08/21/pAiucCj.jpg" width="300" height="300"></span>
@@ -143,6 +172,13 @@ div{
 	<br>
 	<br>
 		<br>
+		<div id="loginForm" style="display: none border:none;">
+    <form onsubmit="return authenticate()">
+       <b><label for="password">密码:</label></b>
+    <input type="password" id="password" name="password" required>
+    <br><br><button type="submit">确定</button>
+    <input type="reset" value="重置">
+    </form>
 <hr>
 <a href="jszc.html"><hl>skyfly  版权所有</hl></a>
 		</center>
@@ -163,12 +199,7 @@ document.querySelectorAll('img').forEach(img => {
   }, false);
 });
   </script>
-<div id="loginForm" style="display: none;">
-    <form onsubmit="return authenticate()">
-        <label for="password">输入密码:</label>
-        <input type="password" id="password" required>
-        <input type="submit" value="登录">
-    </form>
 </div>
+<script src="szpw.js"></script>
 </body>
 </html>
