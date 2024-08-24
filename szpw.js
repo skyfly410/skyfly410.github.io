@@ -5,9 +5,9 @@ function validateAndRedirect() {
         window.location.href = 'https://skyfly410.github.io/bmfile-bmpic.html';//
         return false;
     } else {
-        alert('输入错误，请重试！');
+        alert('请认真输入，要不然我就不给你看了，满足不了你的好奇心了！');
         // var messageElement = document.getElementById('message');
-        // messageElement.textContent = '输入错误，请重试！';
+        // messageElement.textContent = '请认真输入，要不然我就不给你看了，满足不了你的好奇心了！';
         return false; 
     }
 }
