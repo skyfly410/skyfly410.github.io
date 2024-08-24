@@ -90,11 +90,6 @@ div{
       }
     });
   </script>
- <style>
-        #content {
-            display: none;
-        }
-</style>
 </head>
 <body>
 	<div class="nav">
@@ -107,12 +102,10 @@ div{
 <li><a href="bmfile.html" class="change-color">秘 密 花 园</a></li></center>
 </ul>
 <br>
-		    <div id="content" style="border:none">
-		<center>
-<div style="display: flex;border:none; justify-content: center; align-items: center; flex-wrap: wrap;">
+<center><div style="display: flex;border:none; justify-content: center; align-items: center; flex-wrap: wrap;">
 <span style="margin: 50px;"><img src="https://s21.ax1x.com/2024/08/21/pAiurVS.jpg" width="500" height="300"></span>
 <span style="margin: 50px;"><img src="https://s21.ax1x.com/2024/08/21/pAiucCj.jpg" width="300" height="300"></span>
-</div></div>
+</div>
 	<br>
 	<br>
 	<br>
@@ -137,35 +130,5 @@ document.querySelectorAll('img').forEach(img => {
 });
   </script>
 </div>
-<script>
-        // 假设这是从前端或后端获取的令牌
-        const token = localStorage.getItem('authToken');
-
-        window.onload = function() {
-            if (token) {
-                // 假设的验证函数，实际中应发送请求到服务器
-                verifyToken(token, function(isValid) {
-                    if (isValid) {
-                        showContent();
-                    } else {
-                        alert('Your session has expired. Please log in again.');
-                        // 重定向到登录页面或执行其他逻辑
-                    }
-                });
-            } else {
-                // 如果没有令牌，重定向或提示登录
-            }
-        };
-
-        function verifyToken(token, callback) {
-            // 实际应用中，这里应该是向后端发送请求的代码
-            // 这里只是模拟验证逻辑
-            setTimeout(() => callback(token === 'expectedToken'), 1000);
-        }
-
-        function showContent() {
-            document.getElementById('content').style.display = 'block';
-        }
-    </script>
 </body>
 </html>
