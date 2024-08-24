@@ -92,6 +92,14 @@ div{
   </script>
 </head>
 <body>
+	<script>
+function changeURL(event) {
+    event.preventDefault(); // 阻止链接的默认行为
+    window.history.pushState({}, '', 'https://skyfly410.github.io');
+    // 这里可以加载新页面的内容，但不会重新加载整个页面
+}
+</script>
+	<a href="https://skyfly410.github.io" onclick="changeURL(event)">
 	<div class="nav">
  <ul>
 <center><li><a href="index.html">首 页</a></li>
@@ -113,7 +121,7 @@ div{
 	<br>
 <hr>
 <a href="jszc.html"><hl>skyfly  版权所有</hl></a>
-		</center>
+		</center></a>
 <!-- 长按操作禁用脚本 -->
   <script>
 document.querySelectorAll('img').forEach(img => {
@@ -132,12 +140,5 @@ document.querySelectorAll('img').forEach(img => {
 });
   </script>
 </div>
-<script>
-function changeURL(event) {
-    event.preventDefault(); // 阻止链接的默认行为
-    window.history.pushState({}, '', 'https://skyfly410.github.io');
-    // 这里可以加载新页面的内容，但不会重新加载整个页面
-}
-</script>
 </body>
 </html>
