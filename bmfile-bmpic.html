@@ -34,8 +34,8 @@ a:hover{
 <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
 <meta name="mobile-agent" content="format=html5; url=https://skyfly410.github.io">
 <meta name="robots" content="noindex, nofollow">
-  <link rel="alternate" media="only screen and (max-width:640px)" href="https://skyfly410.github.io">
-	 <style>
+<link rel="alternate" media="only screen and (max-width:640px)" href="https://skyfly410.github.io">
+<style>
 div{
 	min-width:1228px;
 	max-width:0px;
@@ -90,65 +90,6 @@ div{
       }
     });
   </script>
-	 <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            if (!isAuthenticated()) {
-                // 用户未认证，显示登录表单，隐藏内容
-                document.getElementById('content').style.display = 'none';
-                document.getElementById('loginForm').style.display = 'block';
-            } else {
-                // 用户已认证，显示内容
-                document.getElementById('content').style.display = 'block';
-            }
-        });
-
-        function authenticate() {
-            var password = document.getElementById('password').value;
-            if (password === 'yourCorrectPassword') { // 这里应比较密码哈希值
-                // 密码正确，存储认证状态
-                localStorage.setItem('authenticated', 'true');
-                document.getElementById('content').style.display = 'block';
-                document.getElementById('loginForm').style.display = 'none';
-                return true;
-            } else {
-                alert('密码错误');
-                return false;
-            }
-        }
-
-        function isAuthenticated() {
-            return localStorage.getItem('authenticated') === 'true';
-        }
-    </script>
-	<style>
-    button, input[type="submit"] {
-    padding: 10px 20px; /* 设置内边距 */
-    border: none; /* 移除边框 */
-    border-radius: 5px; /* 设置边框圆角 */
-    background-color: #007bff; /* 设置背景颜色 */
-    color: white; /* 设置文字颜色 */
-    font-size: 16px; /* 设置字体大小 */
-    cursor: pointer; /* 设置鼠标悬停时的光标形状 */
-}
-
-    button, input[type="reset"] {
-    padding: 10px 20px; /* 设置内边距 */
-    border: none; /* 移除边框 */
-    border-radius: 5px; /* 设置边框圆角 */
-    background-color: #007bff; /* 设置背景颜色 */
-    color: white; /* 设置文字颜色 */
-    font-size: 16px; /* 设置字体大小 */
-    cursor: pointer; /* 设置鼠标悬停时的光标形状 */
-}
-	
-    input[type="text"], input[type="password"] {
-    width: 200px; /* 设置宽度 */
-    padding: 10px; /* 添加内边距 */
-    border: 1px solid #ccc; /* 设置边框 */
-    border-radius: 5px; /* 设置边框圆角 */
-    font-size: 16px; /* 设置字体大小 */
-}
-</style>
 </head>
 <body>
 	<div class="nav">
@@ -162,7 +103,6 @@ div{
 </ul>
 <br>
 		<center>
-                <div id="content" style="display: none;border:none;">
 <div style="display: flex;border:none; justify-content: center; align-items: center; flex-wrap: wrap;">
 <span style="margin: 50px;"><img src="https://s21.ax1x.com/2024/08/21/pAiurVS.jpg" width="500" height="300"></span>
 <span style="margin: 50px;"><img src="https://s21.ax1x.com/2024/08/21/pAiucCj.jpg" width="300" height="300"></span>
@@ -171,14 +111,7 @@ div{
 	<br>
 	<br>
 	<br>
-		<br>
-		<div id="loginForm" style="display: none;border:none;">
-    <form onsubmit="return authenticate()">
-       <b><label for="password">密码:</label></b>
-    <input type="password" id="password" name="password" required>
-    <br><br><button type="submit">确定</button>
-    <input type="reset" value="重置">
-    </form>
+	<br>
 <hr>
 <a href="jszc.html"><hl>skyfly  版权所有</hl></a>
 		</center>
@@ -200,6 +133,5 @@ document.querySelectorAll('img').forEach(img => {
 });
   </script>
 </div>
-<script src="szpw2.js"></script>
 </body>
 </html>
