@@ -1,4 +1,4 @@
-// script.js
+// top.js
 
 // 选择“回到顶部”按钮
 const backToTopButton = document.getElementById('backToTop');
