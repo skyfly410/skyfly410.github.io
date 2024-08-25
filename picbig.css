@@ -7,11 +7,7 @@
   width: 300px;
   cursor: pointer;
   transition: transform 0.2s ease;
-  border: none; 
-}
-
-.image:active {
-  border: 1px solid #007bff; 
+  border: none;  
 }
 
 .image:hover {
