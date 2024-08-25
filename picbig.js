@@ -29,7 +29,10 @@ window.onclick = function(event) {
 
 // 为每个图片添加点击事件
 images.forEach(function(image) {
-  image.onclick = openModal;
+  image.addEventListener('click', function() {
+// 添加边框线样式
+    this.classList.add('border-active');
+  });
 });
 
 // 关闭按钮的点击事件
