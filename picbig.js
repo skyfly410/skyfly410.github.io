@@ -1,5 +1,4 @@
 // picbig.js
-// 移除所有与边框相关的JavaScript代码
 var modal = document.getElementById("myModal");
 var img = document.getElementById("img01");
 var modalImg = document.getElementsByClassName("image");
