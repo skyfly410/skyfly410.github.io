@@ -90,6 +90,15 @@ div{
       }
     });
   </script>
+<script>
+        window.onload = function() {
+            // 检查密码验证状态
+            if (sessionStorage.getItem('passwordVerified') !== 'true') {
+                // 如果未验证，重定向到密码保护页面
+                window.location.href = 'bmfile.html';
+            }
+        };
+</script>
 </head>
 <body>
 	<div class="nav">
