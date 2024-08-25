@@ -4,13 +4,18 @@
 }
 
 .image {
-  width: 300px; /* 根据需要调整 */
+  width: 300px;
   cursor: pointer;
   transition: transform 0.2s ease;
+  border:none; 
+}
+
+.image:active {
+  border:none;
 }
 
 .image:hover {
-  transform: scale(1.1); /* 鼠标悬停时放大 */
+  transform: scale(1.1);
 }
 
 .modal {
