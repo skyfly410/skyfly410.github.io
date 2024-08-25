@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
 <head>
  <link rel="icon" href="https://s21.ax1x.com/2024/08/05/pkv8xdH.png" type="image/png"/>
+ <link rel="stylesheet" href="picbig.css">
  <meta charset="utf-8">
 	<style type="text/css">
 a:link,a:visited{
@@ -95,7 +96,7 @@ div{
             // 检查密码验证状态
             if (sessionStorage.getItem('passwordVerified') !== 'true') {
                 // 如果未验证，重定向到密码保护页面
-                window.location.href = 'bmfile.html';
+                window.location.href = '/skyfly410/skyfly410.github.io/edit/master/bmfile.html';
             }
         };
 </script>
@@ -111,9 +112,16 @@ div{
 <li><a href="bmfile.html" class="change-color">秘 密 花 园</a></li></center>
 </ul>
 <br>
+<div class="image-container" style="border:none">
 <center><div style="display: flex;border:none; justify-content: center; align-items: center; flex-wrap: wrap;">
-<span style="margin: 50px;"><img src="https://s21.ax1x.com/2024/08/21/pAiurVS.jpg" width="500" height="300"></span>
-<span style="margin: 50px;"><img src="https://s21.ax1x.com/2024/08/21/pAiucCj.jpg" width="300" height="300"></span>
+<span style="margin: 50px;"><img src="https://s21.ax1x.com/2024/08/21/pAiurVS.jpg" width="500" height="300" class="image"></span>
+<span style="margin: 50px;"><img src="https://s21.ax1x.com/2024/08/21/pAiucCj.jpg" width="300" height="300" class="image"></span>
+</div></div>
+<!-- 放大图片的模态框 -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
 </div>
 	<br>
 	<br>
@@ -139,5 +147,6 @@ document.querySelectorAll('img').forEach(img => {
 });
   </script>
 </div>
+<script src="picbig.js"></script>
 </body>
 </html>
