@@ -1,13 +1,16 @@
 /* picbig.css */
-.image-container {
-  position: relative;
+.image-container, .image {
+  border: none;
+  padding: 0;
+  margin: 0;
 }
 
 .image {
   width: 300px;
   cursor: pointer;
   transition: transform 0.2s ease;
-  border: none;  
+  border: none;
+  outline: none;
 }
 
 .image:hover {
