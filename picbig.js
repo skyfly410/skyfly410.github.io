@@ -11,8 +11,8 @@ var images = document.querySelectorAll('.image-container .image');
 // 点击图片时执行的函数
 function openModal(event) {
   modal.style.display = "block";
-  modalImg.src = img.src;
-  caption.innerHTML = img.alt;
+  img.src = this.src;
+  captionText.innerHTML = this.alt;
 }
 
 // 点击关闭按钮时执行的函数
