@@ -129,19 +129,9 @@ div{
 	<br></center>
 <hr>
 <center><a href="jszc.html"><hl>skyfly  版权所有</hl></a></center>
-<!-- 长按操作禁用脚本 -->
   <script>
-document.querySelectorAll('img').forEach(img => {
-  // 阻止图片的长按操作，禁用上下文菜单
-  img.addEventListener('contextmenu', function(event) {
-    event.preventDefault();
-  }, false);
-
-  // 阻止图片的拖拽保存
-  img.draggable = false;
-
-  // 阻止触摸事件，禁用长按保存
-  img.addEventListener('touchstart', function(event) {
+document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('contextmenu', function(event) {
     event.preventDefault();
   }, false);
 });
