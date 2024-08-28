@@ -100,6 +100,14 @@ div{
             }
         };
 </script>
+<script>
+document.addEventListener('keydown', function(e) {
+    // 检查Ctrl键和U键是否同时按下
+    if (e.ctrlKey && (e.keyCode === 85)) {
+        e.preventDefault();
+    }
+});
+</script>
 </head>
 <body>
 	<div class="nav">
