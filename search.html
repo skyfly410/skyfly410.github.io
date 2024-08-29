@@ -164,30 +164,39 @@ p {
 </center><br>
 <script>
 var data = [
+  // 
   { title: '本人形象照片,', description: '去看看', url: 'https://skyfly410.github.io/bodylbt.html' },
   { title: '风景旅游', description: '去看看', url: 'https://skyfly410.github.io/naturelbt.html' }
   { title: 'Photoshop CS4免费破解版在线下载', description: '去看看', url: 'https://pan.baidu.com/s/1hrNWKZU%C2%A0' }
    { title: 'Adobe CC2017全套软件免费破解版在线下载', description: '去看看', url: 'https://pan.baidu.com/s/1o83eV8m%C2%A0#list/path=%2F' }
+  // 
 ];
+
 function storeData() {
   localStorage.setItem('searchData', JSON.stringify(data));
 }
+
 function getStoredData() {
   var storedData = localStorage.getItem('searchData');
   return storedData ? JSON.parse(storedData) : data;
 }
+
 function performSearch() {
   var query = document.getElementById('searchQuery').value.trim(); // 获取查询并去除首尾空格
   var resultsElement = document.getElementById('results');
+  
   // 清空现有内容
   resultsElement.innerHTML = '';
+  
   // 只有当查询字符串不为空时才执行搜索
   if (query) {
     var results = getStoredData().filter(function(item) {
       return item.title.includes(query) || item.description.includes(query);
     });
+    
     // 存储搜索结果到localStorage
     localStorage.setItem('searchResults', JSON.stringify(results));
+    
     // 显示搜索结果
     if (results.length > 0) {
       results.forEach(function(item, index) {
@@ -198,10 +207,12 @@ function performSearch() {
     }
   }
 }
+
 function displaySearchResults() {
   var results = JSON.parse(localStorage.getItem('searchResults'));
   displayResults(results);
 }
+
 function displayResults(results) {
   var resultsElement = document.getElementById('results');
   if (results && results.length > 0) {
@@ -212,6 +223,7 @@ function displayResults(results) {
     resultsElement.innerHTML = '<p>没有找到结果。</p>';
   }
 }
+
 // 页面加载时检查localStorage中是否有搜索结果，如果有，则显示
 document.addEventListener('DOMContentLoaded', function() {
   storeData(); // 存储初始数据
