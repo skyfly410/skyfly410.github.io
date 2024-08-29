@@ -82,10 +82,12 @@ div{
   color: red;
 		</style>
 <script>
-document.getElementById('playButton').addEventListener('click', function() {
-    var player = document.getElementById('videoPlayer');
-    player.contentWindow.postMessage('{"event":"command","func":"play","args":""}', '*');
-});
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.getElementById('playButton').addEventListener('click', function() {
+                var player = document.getElementById('videoPlayer');
+                player.contentWindow.postMessage('{"event":"command","func":"play","args":""}', '*');
+            });
+        });
 </script>
 </head>
 <body>
