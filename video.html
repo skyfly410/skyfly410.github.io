@@ -81,6 +81,12 @@ div{
 	.change-color {
   color: red;
 		</style>
+<script>
+document.getElementById('playButton').addEventListener('click', function() {
+    var player = document.getElementById('videoPlayer');
+    player.contentWindow.postMessage('{"event":"command","func":"play","args":""}', '*');
+});
+</script>
 </head>
 <body>
 	<div class="nav">
@@ -102,11 +108,5 @@ div{
 <hr>
 <a href="jszc.html"><hl>skyfly  版权所有</hl></a>
 		</center><br>
-<script>
-document.getElementById('playButton').addEventListener('click', function() {
-    var player = document.getElementById('videoPlayer');
-    player.contentWindow.postMessage('{"event":"command","func":"play","args":""}', '*');
-});
-</script>
 </body>
 </html>
