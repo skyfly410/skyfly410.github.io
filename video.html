@@ -92,24 +92,21 @@ div{
 <li><a href="download.html">资 源 分 享</a></li>
 <li><a href="bmfile.html">秘 密 花 园</a></li></center>
 </ul>
-<br>
-<br>
-		<br>
-		<br>
-		<center>
-			<br>
+<br><br><br><br>
+		<center><br>
 			<h1>我的初中——南京市第十三中学红山校区（今南京市第十三中学红山分校）20周年校庆活动</h1>
-			<h2>在读时间：2009.9-2012.6；拍摄时间：2023.10</h2>
-			<br>
-<iframe src="//player.bilibili.com/player.html?bvid=BV1t34y1371M&page=1" width="600" height="400" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen autoplay="false" muted>
+			<h2>在读时间：2009.9-2012.6；拍摄时间：2023.10</h2><br>
+<iframe src="//player.bilibili.com/player.html?bvid=BV1t34y1371M&page=1" width="600" height="400" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen muted>
 </iframe>
-	<br>
-	<br>
-	<br>
-	<br>
+<br><br><br><br>
 <hr>
 <a href="jszc.html"><hl>skyfly  版权所有</hl></a>
-		</center>
-<br>
+		</center><br>
+<script>
+document.getElementById('playButton').addEventListener('click', function() {
+    var player = document.getElementById('videoPlayer');
+    player.contentWindow.postMessage('{"event":"command","func":"play","args":""}', '*');
+});
+</script>
 </body>
 </html>
