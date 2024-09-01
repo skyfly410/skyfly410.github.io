@@ -100,6 +100,12 @@ div{
             }
         };
 </script>
+
+<style>
+img::context-menu {
+    display: none;
+}
+</style>
 </head>
 <body>
 	<div class="nav">
@@ -134,10 +140,25 @@ div{
 <hr>
 <center><a href="jszc.html"><hl>skyfly  版权所有</hl></a></center><br>
   <script>
-document.addEventListener('DOMContentLoaded', function() {
-  document.addEventListener('contextmenu', function(event) {
-    event.preventDefault();
-  }, false);
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+}, false);
+
+document.addEventListener('touchstart', function(e) {
+    e.preventDefault();
+}, false);
+document.addEventListener('touchend', function(e) {
+    e.preventDefault();
+}, false);
+
+document.querySelectorAll('img').forEach(function(img) {
+    img.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    }, false);
+});
+
+document.addEventListener('copy', function(e) {
+    e.preventDefault();
 });
   </script>
 </div>
