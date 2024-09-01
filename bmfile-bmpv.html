@@ -100,11 +100,10 @@ div{
             }
         };
 </script>
-
 <style>
-img::context-menu {
-    display: none;
-}
+    img {
+        touch-action: none;
+    }
 </style>
 </head>
 <body>
@@ -139,30 +138,6 @@ img::context-menu {
 <br><br><br><br><br><br>
 <hr>
 <center><a href="jszc.html"><hl>skyfly  版权所有</hl></a></center><br>
-	<!-- 禁用长按功能脚本 -->
-  <script>
-document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-}, false);
-
-document.addEventListener('touchstart', function(e) {
-    e.preventDefault();
-}, false);
-
-document.addEventListener('touchend', function(e) {
-    e.preventDefault();
-}, false);
-
-document.querySelectorAll('img').forEach(function(img) {
-    img.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-    }, false);
-});
-
-document.addEventListener('copy', function(e) {
-    e.preventDefault();
-});
-  </script>
 </div>
 <script src="picbig.js"></script>
 </body>
