@@ -100,11 +100,17 @@ div{
             }
         };
 </script>
-<style>
-    img {
-        touch-action: none;
-    }
-</style>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('img').forEach(function(img) {
+                img.addEventListener('touchstart', function(event) {
+                    if (event.touches.length > 1) { // 检测到多点触控，可能是长按
+                        event.preventDefault();
+                    }
+                }, false);
+            });
+        });
+</script>
 </head>
 <body>
 	<div class="nav">
