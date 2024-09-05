@@ -100,16 +100,28 @@ div{
             }
         };
 </script>
+<style>
+  .zoomable {
+    cursor: zoom-in;
+    border: 1px solid #ccc;
+    padding: 5px;
+  }
+</style>
 <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            document.querySelectorAll('img').forEach(function(img) {
-                img.addEventListener('touchstart', function(event) {
-                    if (event.touches.length > 1) { // 检测到多点触控，可能是长按
-                        event.preventDefault();
-                    }
-                }, false);
-            });
-        });
+  function preventLongPress(event) {
+    // 阻止默认行为，例如长按保存图片
+    event.preventDefault();
+  }
+
+  // 页面加载完成后，为所有可放大图片添加长按事件监听器
+  window.onload = function() {
+    var images = document.querySelectorAll('.zoomable');
+    images.forEach(function(img) {
+      // 阻止长按默认行为
+      img.addEventListener('touchstart', preventLongPress, { passive: false });
+      img.addEventListener('contextmenu', preventLongPress);
+    });
+  };
 </script>
 </head>
 <body>
