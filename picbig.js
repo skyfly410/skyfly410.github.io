@@ -34,3 +34,18 @@ images.forEach(function(image) {
 
 // 关闭按钮的点击事件
 closeBtn.onclick = closeModal;
+
+function preventLongPress(event) {
+    // 阻止默认行为，例如长按保存图片
+    event.preventDefault();
+  }
+
+  // 页面加载完成后，为所有可放大图片添加长按事件监听器
+  window.onload = function() {
+    var images = document.querySelectorAll('.zoomable');
+    images.forEach(function(img) {
+      // 阻止长按默认行为
+      img.addEventListener('touchstart', preventLongPress, { passive: false });
+      img.addEventListener('contextmenu', preventLongPress);
+    });
+  };
