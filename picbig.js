@@ -35,17 +35,19 @@ images.forEach(function(image) {
 // 关闭按钮的点击事件
 closeBtn.onclick = closeModal;
 
-// 阻止长按事件的默认行为
-function preventLongPress(event) {
-  event.preventDefault();
-}
+// 阻止长按保存图片和阻止上下文菜单
+document.addEventListener('DOMContentLoaded', function() {
+    var imageContainers = document.querySelectorAll('.image-container');
 
-// 页面加载完成后，为所有可放大图片添加长按事件监听器
-window.onload = function() {
-  var images = document.querySelectorAll('.image-container .image'); // 确保选择正确的图片
-  images.forEach(function(img) {
-    // 阻止长按默认行为
-    img.addEventListener('touchstart', preventLongPress, { passive: false });
-    img.addEventListener('contextmenu', preventLongPress);
-  });
-};
+    imageContainers.forEach(function(container) {
+        // 阻止长按保存图片
+        container.addEventListener('touchstart', function(event) {
+            event.preventDefault(); // 阻止默认的长按行为
+        }, { passive: false });
+
+        // 阻止上下文菜单
+        container.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+        }, false);
+    });
+});
