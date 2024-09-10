@@ -134,17 +134,15 @@ var _hmt = _hmt || [];
   .container p {
     text-align: left; /* 文字左对齐 */
     width: 58%; /* 段落宽度，可以根据需要调整 */
+    line-height: 1.5; /* 设置行高 */
     margin: 5px 0; /* 在段落之间添加一些间距 */
     border: none;
   }
  @media (max-width: 768px) {
-    .container {
-      height: auto; /* 在移动设备上设置容器高度为自动 */
-    }
-
     .container p {
-      width: 90%; /* 在移动设备上调整段落宽度 */
-      margin: 10px 0; /* 减少段落之间的垂直外边距 */
+      width: 50%; /* 保持宽度不变 */
+      margin: 5px 0; /* 减少段落之间的垂直外边距 */
+      line-height: 1.2; /* 调整行高以减少高度 */
     }
   }
 </style>
