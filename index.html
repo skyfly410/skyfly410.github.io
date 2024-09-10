@@ -137,9 +137,13 @@ var _hmt = _hmt || [];
     margin: 5px 0; /* 在段落之间添加一些间距 */
     border: none;
   }
- @media (max-width: 768px) {
+@media (max-height: 980px) {
+    .container {
+      height: auto; /* 在移动设备上设置容器高度为自动 */
+    }
+
     .container p {
-      margin: 5px 0; /* 在移动设备上减少段落之间的垂直外边距 */
+      margin: 10px 0; /* 减少段落之间的垂直外边距 */
     }
   }
 </style>
