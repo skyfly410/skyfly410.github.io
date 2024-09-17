@@ -92,16 +92,14 @@ div{
     });
   </script>
 <script>
-        // 这里的 JavaScript 代码会在页面加载时执行
         window.onload = function() {
-            var content = document.getElementById('content');
-            if (/* 验证用户登录状态 */) {
-                content.style.display = 'block';
-            } else {
-                window.location.href = 'https://skyfly410.github.io/bmfile.html'; // 重定向到登录页面
+            // 检查密码验证状态
+            if (sessionStorage.getItem('passwordVerified') !== 'true') {
+                // 如果未验证，重定向到密码保护页面
+                window.location.href = 'https://skyfly410.github.io/bmfile.html';
             }
         };
-    </script>
+</script>
 <noscript>
   <meta http-equiv="refresh" content="0;url=nojs.html">
 </noscript>
@@ -117,7 +115,6 @@ div{
 <li><a href="bmfile.html" class="change-color">秘 密 花 园</a></li></center>
 </ul>
 <br><br><br><br><br><br>
-<div id="content" style="display: none;border:none">
 <center><h1>图片</h1></center>
 <div class="image-container" style="border:none">
 <center><div style="display: flex;border:none; justify-content: center; align-items: center; flex-wrap: wrap;">
@@ -136,7 +133,6 @@ div{
 <h3><a href="https://v.youku.com/v_show/id_XMzg5ODA0MTM2OA==.html" target="_blank">本人表哥的婚礼全纪录</a></h3><br>
 <h3><a href="https://v.youku.com/v_show/id_XNDAwMjUxNjQyNA==.html" target="_blank">本人堂哥结婚时晚会现场小插曲</a></h3>
 </center>
-</div>
 <br><br><br><br><br><br>
 <hr>
 <center><a href="jszc.html"><hl>skyfly  版权所有</hl></a></center><br>
