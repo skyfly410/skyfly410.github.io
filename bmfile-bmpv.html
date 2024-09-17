@@ -92,14 +92,16 @@ div{
     });
   </script>
 <script>
+        // 这里的 JavaScript 代码会在页面加载时执行
         window.onload = function() {
-            // 检查密码验证状态
-            if (sessionStorage.getItem('passwordVerified') !== 'true') {
-                // 如果未验证，重定向到密码保护页面
-                window.location.href = 'https://skyfly410.github.io/bmfile.html';
+            var content = document.getElementById('content');
+            if (/* 验证用户登录状态 */) {
+                content.style.display = 'block';
+            } else {
+                window.location.href = 'https://skyfly410.github.io/bmfile.html'; // 重定向到登录页面
             }
         };
-</script>
+    </script>
 <noscript>
   <meta http-equiv="refresh" content="0;url=nojs.html">
 </noscript>
