@@ -27,7 +27,7 @@ a:hover{
             font-family:'kaiti';
         }
 </style>
-<title>skyfly（翔哥）的家园-留言</title>
+<title>skyfly（翔哥）的家园-留言更新</title>
 <meta name=“description” content="这是我的个人相册网站，欢迎浏览并留言。">
 <meta name=“keywords” content="相册, 留言板, 个人网站">
 <meta name="author" content="skyfly410">
@@ -132,7 +132,7 @@ document.addEventListener('keydown', function(e) {
         <div class="nav">
  <ul>
 <center><li><a href="index.html">首 页</a></li>
-<li><a href="liuyan.html"  class="change-color">留 言</a></li>
+<li><a href="404.html"  class="change-color">留 言</a></li>
 <li><a href="photo.html">相 册</a></li>
 <li><a href="video.html">视 频 展 示</a></li>
 <li><a href="download.html">资 源 分 享</a></li>
