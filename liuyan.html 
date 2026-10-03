@@ -145,14 +145,14 @@ document.addEventListener('keydown', function(e) {
                 <center>
 <form action="https://formsubmit.co/1181163252@qq.com" method="POST">
 <b><label>昵称:</label></b><br>
-<input type="text" name="your name" style="width: 300px;padding:6px;" required><br><br>
+<input type="text" name="yourname" style="width: 300px;padding:6px;" required><br><br>
  <b><label>性别:</label></b><br>
 <select name="gender" required>
   <option value="男">男</option>
   <option value="女">女</option>
 </select><br><br>
 <b><label>联系方式:</label></b><br>
- <input type="text" name="mobilePhone or Email" style="width: 300px;padding:6px;"><br><br>
+ <input type="text" name="contact" style="width: 300px;padding:6px;"><br><br>
  <b><label>留言内容（建议或者想法等等）:</label></b><br>
  <textarea name="message"  placeholder="说出您的心中所想吧！"  rows="6" style="width: 350px;padding:6px;" required></textarea>
 <br><br><br><br><button type="submit">确定发送</button>
