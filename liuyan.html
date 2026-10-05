@@ -153,7 +153,7 @@ document.addEventListener('keydown', function(e) {
   <option value="女">女</option>
 </select><br><br>
 <b><label>照片/头像/截图文件（选填）:</label></b><br>
-<input type="file" name="图片" accept="image/*"><br><br>
+<input type="file" name="图片" accept="image/*"><p style="color:red;">重要提醒：图片总大小不能超过10MB，否则留言失败！</p><br><br>
 <b><label>联系方式:</label></b><br>
  <input type="text" name="联系方式" placeholder="您的手机号或者邮箱（选填）" style="width: 300px;padding:6px;"><br><br>
  <b><label>留言内容:</label></b><br>
@@ -169,23 +169,5 @@ document.addEventListener('keydown', function(e) {
 <hr>
 <a href="jszc.html"><hl>skyfly  版权所有</hl></a>
 </center>
-<script>
-const form = document.querySelector('form');
-const fileInput = document.querySelector('input[name="img[]"]');
-const MAX_SIZE = 10 * 1024 * 1024; // 10MB
-
-form.addEventListener('submit', function(e){
-  let total = 0;
-  if(fileInput.files.length > 0){
-    for(let file of fileInput.files){
-      total += file.size;
-    }
-  }
-  if(total > MAX_SIZE){
-    e.preventDefault();
-    alert(`图片总大小不能超过10MB！当前：${(total/1024/1024).toFixed(2)}MB`);
-  }
-})
-</script>
 </body>
 </html>
