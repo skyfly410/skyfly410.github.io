@@ -169,5 +169,23 @@ document.addEventListener('keydown', function(e) {
 <hr>
 <a href="jszc.html"><hl>skyfly  版权所有</hl></a>
 </center>
+<script>
+const form = document.querySelector('form');
+const fileInput = document.querySelector('input[name="img[]"]');
+const MAX_SIZE = 10 * 1024 * 1024; // 10MB
+
+form.addEventListener('submit', function(e){
+  let total = 0;
+  if(fileInput.files.length > 0){
+    for(let file of fileInput.files){
+      total += file.size;
+    }
+  }
+  if(total > MAX_SIZE){
+    e.preventDefault();
+    alert(`图片总大小不能超过10MB！当前：${(total/1024/1024).toFixed(2)}MB`);
+  }
+})
+</script>
 </body>
 </html>
