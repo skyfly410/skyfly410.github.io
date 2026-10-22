@@ -1,247 +1,555 @@
-<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
-<head>
-<link rel="icon" href="https://s21.ax1x.com/2024/08/05/pkv8xdH.png" type="image/png"/>
-<meta charset="utf-8">
-<style type="text/css">
-a:link,a:visited{
- text-decoration:none; 
+    <head>
+        <link rel="icon" href="https://s21.ax1x.com/2024/08/05/pkv8xdH.png" type="image/png">
+        <meta charset="utf-8">
+        <style type="text/css">
+            a:link,a:visited{
+            
+             text-decoration:none; 
+            
+            }
+            
+            a:hover{
+            
+             text-decoration:none; 
+            
+            }
+            
+             /* 移除链接的所有下划线 */
+            
+                    a, a:hover, a:active {
+            
+                        text-decoration: none;
+            
+                    }
+            
+             /* 设置链接的默认颜色 */
+            
+                    a {
+            
+                        color: #6600FF; 
+            
+                    }
+            
+             /* 设置鼠标悬停时链接的颜色 */
+            
+                    a:hover {
+            
+                        color: red; 
+            
+                    }
+            
+            /* 设置字体样式 */
+            
+                    * {
+            
+                        font-family:'kaiti';
+            
+                    }
+            
+            /* 设置表格背景色 */
+            
+            tr.highlighted {
+            
+              background-color:#D0F0C0;
+            
+            }
+            
+            .table-wrap {
+              width:100%;
+              overflow-x:auto;
+            }
+            
+            
+            table {
+              width: 100%;
+              max-width: 1000px;  
+              border-collapse: collapse;
+              border: none !important;
+            margin:3px;}
+            th, td {
+              border: 1px solid #222;
+              padding: 9px 6px;
+              text-align: center;
+              vertical-align: middle;
+            }
+            
+            @media (max-width:600px){
+            
+              .box { ... }
+            
+            }
+        </style>
+        <title>skyfly（翔哥）的家园</title>
+        <meta name="“description”" content="这是我的个人相册网站，欢迎浏览并留言。">
+        <meta name="“keywords”" content="相册, 留言板, 个人网站">
+        <meta name="author" content="skyfly410">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <meta name="mobile-agent" content="format=html5; url=https://skyfly410.github.io">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+         .nav-wrap {
+              background-color: #40a8ff;
+              text-align:center;
+            }
+            .hamburger {
+              display: none;
+              background: #40a8ff;
+              border: none;
+              font-size:22px;
+              color:purple;
+              padding:3px 12px;  /* 顶部蓝条高度*/
+              cursor:pointer;
+            }
+            .menu-list {
+              display:flex;
+              flex-wrap:nowrap;
+            }
+            .menu-list a {
+              flex:1;
+              padding:7px 0;  /* PC端横向菜单高度 */
+              color:purple;
+              text-decoration:none;
+                border:none;
+            
+            }
+            
+            @media (max-width:768px) {
+              .hamburger {
+                display:inline-block;
+              }
+              .menu-list {
+                display:none;
+                flex-direction:column;
+                width: fit-content;
+                margin:0 auto;
+                background:#40a8ff;
+                border:none;
+              }
+              .menu-list.open {
+                display:flex;
+              }
+              .menu-list a {
+                padding:5px 14px; 
+                border-top:0px solid #fff;
+              }
+            }
+            .menu-list.show {
+  display:flex;
 }
-a:hover{
- text-decoration:none; 
+
+/* 导航悬停框 */
+.menu-list a,
+.nav-pc ul li a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.25s;
 }
- /* 移除链接的所有下划线 */
-        a, a:hover, a:active {
-            text-decoration: none;
-        }
-
- /* 设置链接的默认颜色 */
-        a {
-            color: #6600FF; 
-        }
-
- /* 设置鼠标悬停时链接的颜色 */
-        a:hover {
-            color: red; 
-        }
-
-/* 设置字体样式 */
-        * {
-            font-family:'kaiti';
-        }
-
-/* 设置表格背景色 */
-tr.highlighted {
-  background-color:#D0F0C0;
-}
-</style>
-<title>skyfly（翔哥）的家园</title>
-<meta name=“description” content="这是我的个人相册网站，欢迎浏览并留言。">
-<meta name=“keywords” content="相册, 留言板, 个人网站">
-<meta name="author" content="skyfly410">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-<meta name="mobile-agent" content="format=html5; url=https://skyfly410.github.io">
-<link rel="alternate" media="only screen and (max-width:640px)" href="https://skyfly410.github.io">
-<style>
-div{
-	min-width:1228px;
-	max-width:0px;
-	height:300px;
-	border:2px solid blue;
+.menu-list a:hover,
+.nav-pc ul li a:hover {
+  background-color: #409eff;
+  color: #fff;
+  border-radius: 4px;
 }
 
-/* 设置“回到顶部”按钮样式 */
-#backToTop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    color: white;
-    padding: 6px 12px;
-    border-radius: 4px;
-    display: none; /* 初始时隐藏 */
-    z-index: 100;
+@media (min-width:768px) {
+  ...
 }
-</style>
-<style type="text/css">
-			*
-			{margin:0px;
-			padding:0px;}
 
-            /* 导航栏 */
-			.nav{
-				width:600px;
-				height:35px;
-				background-color:#40CFFF;
-				font-size:18px;
-				font-family:"微软雅黑";
-				margin:0px auto;}
-
-			.nav ul{
-				line-height:33px;
-				margin-left:40px;}
-
-			.nav ul li{
-				float:left;
-				width:140px;
-				list-style:none;}
-
-			.nav ul li a{
-				font-size:14px;
-				text-decoration:none;}
-
-   /* 设置导航悬停框全部样式 */	
-			.nav ul li a:hover {
-				background-color:#00BFFF;
-				padding:5px 20px;
-				color:#FFFFFF;
-				border:solid 3px;}
-</style>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?530ce8b4ecdbe8e833f9f2c545ce6ecf";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-<!-- 本站已运用"百度统计"监测访问量-->
-</head>
-<body>
-<div class="nav" id="content">
-<ul>
-<center> <li><a href="index.html">首 页</a></li>
-<li><a href="liuyan.html">留 言</a></li>
-<li><a href="photo.html" >相 册</a></li>
-<li><a href="video.html">视 频 展 示</a></li>
-<li><a href="download.html">资 源 分 享</a></li>
-<li><a href="bmfile.html">秘 密 花 园</a></li></center>
-</ul>
-<br><br><br>
-<center><img src="https://img.zcool.cn/community/01b3b25b9e6713a8012099c8ad6c69.jpg@1280w_1l_2o_100sh.jpg " height="409" width="811"></center>
-<br><br>
-<center><div class="feature" style="border:none; height:10px; color:#C4B0FF; font-size:28px; font-weight:bold">
-        <noscript>
-            <p>前往浏览器设置里启用JavaScript权限查看当前时间。</p>
-        </noscript>
-<div id="time" style="border:none; height:10px; color:#C4B0FF; font-size:28px; font-weight:bold"></div></div></center>
-<br><br><br>
-<center><img src="https://s11.ax1x.com/2020/07/15/U0QtTP.jpg" height="80" width="300"></center>
-<center>
-<p style="text-align: left;justify-content: center;align-items: center;width: 48%;">
-<strong>绰号：</strong> 阿翔、翔哥<br>
-<strong>性别：</strong> 男<br>
-<strong>星座：</strong> 白羊座<br>
-<strong>爱好：</strong> 文学创作、视频剪辑、技术探索和分享、打游戏<br>
-<strong>学历：</strong> 本科<br>
-<strong>学位：</strong> 管理学学士<br>
-<strong>专业：</strong> 互联网营销相关<br>
-<strong>毕业院校：</strong> 南京理工大学<br>
-<strong>社会身份：</strong> 事业单位社畜、打工人<br>
-<strong>居所省份：</strong> 江苏省<br>
-<strong>喜欢的游戏：</strong> 崩坏3、原神、战地2、使命召唤手游版、穿越火线手游版
-</p>
-</center>
- <br><center><font color="#ffec35">╭☆╭★╭♬ ╭☆╭★╭♬ ╭☆╭★╭♬ ╭☆╭★╭♬╭☆╭★╭♬ ╭☆╭★╭♬ ╭☆╭★╭♬ ╭☆╭★╭♬╭☆╭★╭♬ </font></center><br>
- <center><img src="https://s1.ax1x.com/2020/07/15/U0QYwt.jpg" height="80" width="300"></center>
-	 <center><table border="2" cellspacing="0">
-		<tr class="highlighted">
-			<th>自媒体平台</th>
-			<th>昵称/用户名</th>
-			<th>地址传送门</th>
-		</tr>
-		<tbody height="260" align="center" valign="middle">
-		<tr>
-			<td>微信公众号</td>
-			<td>爱生活爱二次元</td>
-			<td><a class="i-link" href="https://mp.weixin.qq.com/s/K0ZpuN4PoWlBrVfJbXfkkw" target="_blank">去扫码关注>>></a></td>
-		</tr>
-		<tr>
-			<td>新浪微博</td>
-			<td>来自东方的渣客君</td>
-			<td><a class="i-link" href="https://weibo.com/3495789312/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" target="_blank">去看看>>></a></td>
-		</tr>
-		<tr>
-			<td>哔哩哔哩</td>
-			<td>飞舞の东方X渣客</td>
-			<td><a class="i-link" href="https://space.bilibili.com/1570999?share_medium=android&share_source=copy_link&bbid=XY1F67E100D49DD96F8B3E169456802516806&ts=1586180737705" target="_blank">去看看>>></a></td>
-		</tr>
-		<tr>
-			<td>今日头条</td>
-			<td>东方渣客</td>
-			<td><a class="i-link" href="https://www.toutiao.com/c/user/4926107496/#mid=1626607548641288" target="_blank">去看看>>></a></td>
-		</tr>
-		<tr>
-			<td>简书</td>
-			<td>东方渣客</td>
-			<td><a class="i-link" href="https://www.jianshu.com/u/ecb605738f24" target="_blank">去看看>>></a></td>
-		</tr>
-		<tr>
-			<td>知乎</td>
-			<td>东方渣客</td>
-			<td><a class="i-link" href="https://www.zhihu.com/people/dong-fang-zha-ke" target="_blank">去看看>>></a></td>
-		</tr>
-		<tr>
-			<td>抖音</td>
-			<td>东方渣客</td>
-			<td><a href="master/img/我的抖音码.jpg" target="_blank">去扫码关注>>></a></td>
-		</tr>
-		</tbody>
-	</table></center>	
- <br><center><font color="#ffec35">╭☆╭★╭♬ ╭☆╭★╭♬ ╭☆╭★╭♬ ╭☆╭★╭♬╭☆╭★╭♬ ╭☆╭★╭♬ ╭☆╭★╭♬ ╭☆╭★╭♬╭☆╭★╭♬ </font></center><br>
-<center><img src="https://s1.ax1x.com/2020/07/15/U0QJeI.jpg" height="80" width="300"></center>
-<center>
-<p style="text-align: left;justify-content: center;align-items: center;width: 60%;">①我们仰望着同一片天空，却看着不同的地方。——《秒速五厘米》</p>
-<p style="text-align: left;justify-content: center;align-items: center;width: 60%;">②我要用什么样的速度才能与你相遇。——《秒速五厘米》</p>
-<p style="text-align: left;justify-content: center;align-items: center;width: 60%;">③谁都不可能和谁在一起一辈子。人就是这样，必须去习惯失去。——《秒速五厘米》</p>
-<p style="text-align: left;justify-content: center;align-items: center;width: 60%;">④一朵花坠落的速度，连时间都放慢了脚步。——《秒速五厘米》</p>
-<p style="text-align: left;justify-content: center;align-items: center;width: 60%;">⑤横亘在我们面前的是那沉重的人生与漫长的时间，让人望而却步。——《秒速五厘米》</p>
-<p style="text-align: left;justify-content: center;align-items: center;width: 60%;">⑥莫忘少时凌云志，曾许人间第一流。</p>
-<p style="text-align: left;justify-content: center;align-items: center;width: 60%;">⑦何须浅碧深红色，自是花中第一流。</p>
-<p style="text-align: left;justify-content: center;align-items: center;width: 60%;">⑧纵有疾风起，人生不言弃。</p>
-<p style="text-align: left;justify-content: center;align-items: center;width: 60%;">⑨生如蝼蚁当立鸿鹄之志，命薄似纸应有不屈之心。</p>
-<p style="text-align: left;justify-content: center;align-items: center;width: 60%;">⑩花有重开日，人无再少年。</p>
-<p style="text-align: left;justify-content: center;align-items: center;width: 60%;">⑪鲜衣怒马少年时，不负韶华行且知。</p>
-<p style="text-align: left;justify-content: center;align-items: center;width: 60%;">⑫少年应有鸿鹄志，当骑骏马踏平川。</p>
-</center>
-<a href="#content" id="backToTop"><img src="https://s21.ax1x.com/2024/08/13/pApoHc4.jpg" height="20" width="20">回到顶部</a>
-<br><br><br>
-<div style="
-   background: linear-gradient(to right, rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5));
-   border:none;
-   height:850px;
-">
-<center><img src="https://s21.ax1x.com/2024/08/13/pApczQ0.jpg" height="50" width="100%"></center>
-	<br><br>
-<font color="#DC143C"><center><h1>公 告</h1></center></font>
-	<br><br><br>
-	<h3>📌 声明</h3>
-	<p>Hello！这里是由我本人于2020年自主搭建的个人网站，网页设计风格来源于我在大学本科实践课程时期（即2017年左右）的基础成果。本站的更多内容和功能会不定期维护、更新，保持期待吧！同时也希望各位宾朋能够通过本站了解到我个人的圈子与喜好，欢迎围观捧场。Thanks!!!</p>
-	<br>
-	<h3>✍️ 签名</h3>
-	<p>不奋斗的人生跟咸鱼有什么区别？追逐梦想的道路上绝不回头！</p>
-	<br>
-	<h3>🗒️  近况</h3>
-	<p>由我本人2025年开始认认真真创作的网络纪传体小说《黄金屋里的老太爷》现已全部完结，请在首发平台起点中文网搜索，欢迎大家阅读评论，感谢大家支持！</p>
-	<br>
-	<h3>💡  温馨提示</h3>
-	<p>1.本站在各大移动端及PC端浏览器（包括知乎、支付宝、微信等APP）中通常均可运行，如果网页出现无法适配手机、平板电脑等移动端屏幕的情况，建议在电脑端浏览器获得更佳的体验。</p>
-	<p>2.如果用户有发现异常、优化建议、网站满意度等相关问题或者想法，可以通过“留言”向我反馈！“留言”板块可能需要收集用户的少量相关信息，并且发送到我的个人邮箱，如有介意，请仔细辨别，谨慎操作！</p>
-	<p>3.经站长深思熟虑，因技术瓶颈和内容量少，暂不开发和上线站内搜索功能。访客朋友们可以在<u>PC端网页使用Ctrl+F</u>快捷键检索想要的内容，<u>移动端</u>的访客可以使用浏览器可能自带的<u>页内查找</u>功能。</p>
-	<br><br>
+            
+              img {
+                max-width:100%;
+                height:auto;
+              }
+            
+            
+            @media (max-width:768px) {
+            
+                body {
+            
+                    font-size:17px !important;
+            
+                }
+            
+               
+            
+                /* a {
+            
+                    display:block;
+            
+                    text-align:center;
+            
+                    padding:3px 0;
+            
+                } */
+            
+                img {
+            
+                    max-width: 100%;
+            
+                    height: auto;
+            
+                }
+            
+                table {
+            
+                    width: 100%;
+            
+                    font-size:14px;
+            
+                    border-collapse: collapse;
+            
+                }
+            
+            }
+            
+            img {
+            
+                max-width: 100%;
+            
+                height: auto;
+            
+            }
+            
+            
+            /* 屏幕小于768px（手机）自动生效 */
+            
+            @media (max-width:768px) {
+            
+                body {
+            
+                    font-size:18px;
+            
+                }
+            
+                input,textarea,select {
+            
+                    width:90vw;
+            
+                    font-size:18px;
+            
+                }
+            
+                nav a {
+            
+                    display:block;
+            
+                }
+            
+            }
+            
+            @media (max-width:768px) {
+            
+               
+            
+                nav a {
+            
+                    display: block;
+            
+                    text-align: center;
+            
+                    padding:4px 0;
+            
+                }
+            
+               
+            
+                .banner-img {
+            
+                    width:100%;
+            
+                    height:auto;
+            
+                    max-height:220px;
+            
+                    object-fit:cover;
+            
+                }
+            
+            
+                table {
+            
+                    width:100%;
+            
+                    font-size:14px;
+            
+              text-align: center;
+                    vertical-align:middle;
+                }
+            
+            
+                body {
+            
+                    font-size:17px;
+            
+                }
+            
+            }
+            
+            
+            .box {
+            
+              max-width: 700px;
+            
+              width: 80%;
+            
+              margin: 0 auto;
+            
+            }
+            
+            .box img {
+            
+              width: 100%;
+            
+              display: block;
+            
+            }
+            
+            .box table {
+            
+              width: 100%;
+            
+              border-collapse: collapse;
+            
+              border: none;
+            
+              margin-top: 10px;
+            
+            }
+            
+            .box th,
+            
+            .box td {
+            
+              border: 1px solid #222;
+            
+              padding: 9px 4px;
+            
+              text-align: center;
+            
+              vertical-align: middle;
+            
+            }
+            
+            
+            
+            
+            /* 设置“回到顶部”按钮样式 */
+            
+            #backToTop {
+            
+                position: fixed;
+            
+                bottom: 20px;
+            
+                right: 20px;
+            
+                background-color: #333;
+            
+                color: white;
+            
+                padding: 6px 12px;
+            
+                border-radius: 4px;
+            
+                display: none; /* 初始时隐藏 */
+            
+                z-index: 100;
+            
+            }
+        </style>
+        
+        <script src="https://hm.baidu.com/hm.js?530ce8b4ecdbe8e833f9f2c545ce6ecf"></script>
+        <script src="https://hm.baidu.com/hm.js?530ce8b4ecdbe8e833f9f2c545ce6ecf"></script>
+        <script src="https://hm.baidu.com/hm.js?530ce8b4ecdbe8e833f9f2c545ce6ecf"></script>
+        <script src="https://hm.baidu.com/hm.js?530ce8b4ecdbe8e833f9f2c545ce6ecf"></script>
+        <script src="https://hm.baidu.com/hm.js?530ce8b4ecdbe8e833f9f2c545ce6ecf"></script>
+        <script>
+            var _hmt = _hmt || [];
+            
+            (function() {
+            
+              var hm = document.createElement("script");
+            
+              hm.src = "https://hm.baidu.com/hm.js?530ce8b4ecdbe8e833f9f2c545ce6ecf";
+            
+              var s = document.getElementsByTagName("script")[0]; 
+            
+              s.parentNode.insertBefore(hm, s);
+            
+            })();
+        </script>
+        <!-- 本站已运用"百度统计"监测访问量-->
+    </head>
+    <body>
+        <div class="nav-wrap">
+            <button class="hamburger" id="menuBtn">☰</button>
+            <div class="menu-list" id="menuList">
+<a href="index.html">首页</a> 
+<a href="liuyan.html">留言</a> 
+<a href="photo.html">相册</a> 
+<a href="video.html">视频展示</a> 
+<a href="download.html">资源分享</a> 
+<a href="bmfile.html">秘密花园</a>
 </div>
-<br><hr>
-<center><a href="jszc.html"><hl>skyfly  版权所有</hl></a></center>
-<br>
-<script src="top.js"></script>
-<script>
-        function showDateTime() {
-            var date = new Date();
-            var dateTime = date.toLocaleString();
-            document.getElementById('time').innerHTML = "现在时间是" + dateTime;
-        }
-        setInterval(showDateTime, 1000);
-</script>
-</body>
+        </div>
+        <br>
+        <center><img src="https://img.zcool.cn/community/01b3b25b9e6713a8012099c8ad6c69.jpg@1280w_1l_2o_100sh.jpg " height="409" width="811"></center>
+        <br><br>
+        <center>
+            <div class="feature" style="border:none; height:10px; color:#C4B0FF; font-size:28px; font-weight:bold">
+                <noscript>
+                    <p>前往浏览器设置里启用JavaScript权限查看当前时间。</p>
+                </noscript>
+                <div id="time" style="border:none; height:10px; color:#C4B0FF; font-size:28px; font-weight:bold"></div>
+            </div>
+        </center>
+        <br><br><br>
+        <center><img src="https://s11.ax1x.com/2020/07/15/U0QtTP.jpg" height="80" width="300"></center><br>
+        <center>
+            <p style="text-align: left;justify-content: center;align-items: center;width: 48%;"><strong>绰号：</strong> 阿翔、翔哥<br> <strong>性别：</strong> 男<br> <strong>星座：</strong> 白羊座<br> <strong>爱好：</strong> 文学创作、视频剪辑、技术探索和分享、打游戏<br> <strong>学历：</strong> 本科<br> <strong>学位：</strong> 管理学学士<br> <strong>专业：</strong> 互联网营销相关<br> <strong>毕业院校：</strong> 南京理工大学<br> <strong>社会身份：</strong> 事业单位社畜、打工人<br> <strong>居所省份：</strong> 江苏省<br> <strong>喜欢的游戏：</strong> 崩坏3、原神、战地2、使命召唤手游版、穿越火线手游版</p>
+        </center>
+        <br>
+        <center>
+            <font color="#ffec35">╭☆╭★╭♬ ╭☆╭★╭♬ ╭☆╭★╭♬ ╭☆╭★╭♬╭☆╭★╭♬ ╭☆╭★╭♬ ╭☆╭★╭♬ ╭☆╭★╭♬╭☆╭★╭♬</font>
+        </center>
+        <br>
+        <center><img src="https://s1.ax1x.com/2020/07/15/U0QYwt.jpg" height="80" width="300"></center>
+        <center>
+            <div class="table-wrap">
+                <div class="box">
+                    <table>
+                        <tbody>
+                            <tr class="highlighted">
+                                <th>自媒体平台</th>
+                                <th>昵称/用户名</th>
+                                <th>地址传送门</th>
+                            </tr>
+                        </tbody>
+                        <tbody height="260" align="center" valign="middle">
+                            <tr>
+                                <td>微信公众号</td>
+                                <td>爱生活爱二次元</td>
+                                <td><a class="i-link" href="https://mp.weixin.qq.com/s/K0ZpuN4PoWlBrVfJbXfkkw" target="_blank">去扫码关注&gt;&gt;&gt;</a></td>
+                            </tr>
+                            <tr>
+                                <td>新浪微博</td>
+                                <td>来自东方的渣客君</td>
+                                <td><a class="i-link" href="https://weibo.com/3495789312/profile?rightmod=1&amp;wvr=6&amp;mod=personinfo&amp;is_all=1" target="_blank">去看看&gt;&gt;&gt;</a></td>
+                            </tr>
+                            <tr>
+                                <td>哔哩哔哩</td>
+                                <td>飞舞の东方X渣客</td>
+                                <td><a class="i-link" href="https://space.bilibili.com/1570999?share_medium=android&amp;share_source=copy_link&amp;bbid=XY1F67E100D49DD96F8B3E169456802516806&amp;ts=1586180737705" target="_blank">去看看&gt;&gt;&gt;</a></td>
+                            </tr>
+                            <tr>
+                                <td>今日头条</td>
+                                <td>东方渣客</td>
+                                <td><a class="i-link" href="https://www.toutiao.com/c/user/4926107496/#mid=1626607548641288" target="_blank">去看看&gt;&gt;&gt;</a></td>
+                            </tr>
+                            <tr>
+                                <td>简书</td>
+                                <td>东方渣客</td>
+                                <td><a class="i-link" href="https://www.jianshu.com/u/ecb605738f24" target="_blank">去看看&gt;&gt;&gt;</a></td>
+                            </tr>
+                            <tr>
+                                <td>知乎</td>
+                                <td>东方渣客</td>
+                                <td><a class="i-link" href="https://www.zhihu.com/people/dong-fang-zha-ke" target="_blank">去看看&gt;&gt;&gt;</a></td>
+                            </tr>
+                            <tr>
+                                <td>抖音</td>
+                                <td>东方渣客</td>
+                                <td><a href="master/img/我的抖音码.jpg" target="_blank">去扫码关注&gt;&gt;&gt;</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </center>
+        <br>
+        <center>
+            <font color="#ffec35">╭☆╭★╭♬ ╭☆╭★╭♬ ╭☆╭★╭♬ ╭☆╭★╭♬╭☆╭★╭♬ ╭☆╭★╭♬ ╭☆╭★╭♬ ╭☆╭★╭♬╭☆╭★╭♬</font>
+        </center>
+        <br>
+        <center><img src="https://s1.ax1x.com/2020/07/15/U0QJeI.jpg" height="80" width="300"></center><br>
+        <center>
+            <p style="text-align: left;justify-content: center;align-items: center;width: 60%;">①我们仰望着同一片天空，却看着不同的地方。——《秒速五厘米》</p>
+            <p style="text-align: left;justify-content: center;align-items: center;width: 60%;">②我要用什么样的速度才能与你相遇。——《秒速五厘米》</p>
+            <p style="text-align: left;justify-content: center;align-items: center;width: 60%;">③谁都不可能和谁在一起一辈子。人就是这样，必须去习惯失去。——《秒速五厘米》</p>
+            <p style="text-align: left;justify-content: center;align-items: center;width: 60%;">④一朵花坠落的速度，连时间都放慢了脚步。——《秒速五厘米》</p>
+            <p style="text-align: left;justify-content: center;align-items: center;width: 60%;">⑤横亘在我们面前的是那沉重的人生与漫长的时间，让人望而却步。——《秒速五厘米》</p>
+            <p style="text-align: left;justify-content: center;align-items: center;width: 60%;">⑥莫忘少时凌云志，曾许人间第一流。</p>
+            <p style="text-align: left;justify-content: center;align-items: center;width: 60%;">⑦何须浅碧深红色，自是花中第一流。</p>
+            <p style="text-align: left;justify-content: center;align-items: center;width: 60%;">⑧纵有疾风起，人生不言弃。</p>
+            <p style="text-align: left;justify-content: center;align-items: center;width: 60%;">⑨生如蝼蚁当立鸿鹄之志，命薄似纸应有不屈之心。</p>
+            <p style="text-align: left;justify-content: center;align-items: center;width: 60%;">⑩花有重开日，人无再少年。</p>
+            <p style="text-align: left;justify-content: center;align-items: center;width: 60%;">⑪鲜衣怒马少年时，不负韶华行且知。</p>
+            <p style="text-align: left;justify-content: center;align-items: center;width: 60%;">⑫少年应有鸿鹄志，当骑骏马踏平川。</p>
+        </center>
+        <a href="#content" id="backToTop"><img src="https://s21.ax1x.com/2024/08/13/pApoHc4.jpg" height="20" width="20">回到顶部</a> <br><br><br>
+        <div style="
+        
+        background: linear-gradient(to right, rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5));
+        
+        border:none;
+        
+        height:1065px;
+        
+        ">
+            <center><img src="https://s21.ax1x.com/2024/08/13/pApczQ0.jpg" height="50" width="100%"></center>
+            <br><br>
+            <font color="#DC143C">
+                <center>
+                    <h1>公 告</h1>
+                </center>
+            </font>
+            <br><br><br>
+            <h3>📌 声明</h3>
+            <p>Hello！这里是由我本人于2020年自主搭建的个人网站，网页设计风格来源于我在大学本科实践课程时期（即2017年左右）的基础成果。本站的更多内容和功能会不定期维护、更新，保持期待吧！同时也希望各位宾朋能够通过本站了解到我个人的圈子与喜好，欢迎围观捧场。Thanks!!!</p>
+            <br>
+            <h3>✍️ 签名</h3>
+            <p>不奋斗的人生跟咸鱼有什么区别？追逐梦想的道路上绝不回头！</p>
+            <br>
+            <h3>🗒️ 近况</h3>
+            <p>由我本人2025年开始认认真真创作的网络纪传体小说《黄金屋里的老太爷》现已全部完结，请在首发平台起点中文网搜索，欢迎大家阅读评论，感谢大家支持！</p>
+            <br>
+            <h3>💡 温馨提示</h3>
+            <p>1.本站在各大移动端及PC端浏览器（包括知乎、支付宝、微信等APP）中通常均可运行，如果网页出现无法适配手机、平板电脑等移动端屏幕的情况，建议在电脑端浏览器获得更佳的体验。</p>
+            <p>2.如果用户有发现异常、优化建议、网站满意度等相关问题或者想法，可以通过“留言”向我反馈！“留言”板块可能需要收集用户的少量相关信息，并且发送到我的个人邮箱，如有介意，请仔细辨别，谨慎操作！</p>
+            <p>3.经站长深思熟虑，因技术瓶颈和内容量少，暂不开发和上线站内搜索功能。访客朋友们可以在<u>PC端网页使用Ctrl+F</u>快捷键检索想要的内容，<u>移动端</u>的访客可以使用浏览器可能自带的<u>页内查找</u>功能。</p>
+            <br><br>
+        </div>
+        <br>
+        <hr>
+        <center>
+            <a href="jszc.html">
+            <hl>skyfly 版权所有</hl>
+            </a>
+        </center>
+        <br>
+        <script src="top.js"></script>
+        <script>
+            function showDateTime() {
+            
+                var date = new Date();
+            
+                var dateTime = date.toLocaleString();
+            
+                document.getElementById('time').innerHTML = "现在时间是" + dateTime;
+            
+            }
+            
+            setInterval(showDateTime, 1000);
+        </script>
+        <script>
+            const btn = document.getElementById('menuBtn');
+            const menu = document.getElementById('menuList');
+            btn.onclick = function(){
+              menu.classList.toggle('open');
+            }
+        </script>
+    </body>
 </html>
