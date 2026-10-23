@@ -1,27 +1,234 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-     <link rel="icon" href="https://s21.ax1x.com/2024/08/05/pkv8xdH.png" type="image/png"/>
-    <title>skyfly（翔哥）的家园-页面不存在</title>
-    <style>
-        body { font-family: Arial, sans-serif; }
-        .container { 
-            margin: 50px auto; 
-            max-width: 600px; 
-            text-align: center; 
-        }
-        h1 { font-size: 3em; color: #333; }
-        p { color: #333; }
-        a { color: #0077cc; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-    </style>
-</head>
-<body>
-    <div class="container">
-       <center><h1>请使用正确的打开方式</h1>
-        <p>非常抱歉，此页面不存在，去其它地方看看吧！</p>
-        <a href="index.html">返回首页</a></center> 
-    </div>
-</body>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" lang="zh-CN">
+    <head>
+        <link rel="icon" href="https://s21.ax1x.com/2024/08/05/pkv8xdH.png" type="image/png">
+        <meta charset="utf-8">
+        <style type="text/css">
+            a:link,a:visited{
+
+             text-decoration:none; 
+
+            }
+
+            a:hover{
+
+             text-decoration:none; 
+
+            }
+
+             /* 移除链接的所有下划线 */
+
+                    a, a:hover, a:active {
+
+                        text-decoration: none;
+
+                    }
+
+             /* 设置链接的默认颜色 */
+
+                    a {
+
+                        color: #6600FF; 
+
+                    }
+
+             /* 设置鼠标悬停时链接的颜色 */
+
+                    a:hover {
+
+                        color: red; 
+
+                    }
+
+            /* 设置字体样式 */
+
+                    * {
+                     font-family:'kaiti';
+        </style>
+        <title>skyfly（翔哥）的家园-页面不存在</title>
+        <meta name="“description”" content="这是我的个人相册网站，欢迎浏览并留言。">
+        <meta name="“keywords”" content="相册, 留言板, 个人网站">
+        <meta name="author" content="skyfly410">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+        <meta name="mobile-agent" content="format=html5; url=https://skyfly410.github.io">
+        <meta name="robots" content="noindex, nofollow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+             .nav-wrap {
+              background-color: #40a8ff;
+              text-align:center;
+            }
+            .hamburger {
+              display: none;
+              background: #40a8ff;
+              border: none;
+              font-size:22px;
+              color:purple;
+              padding:3px 12px;  /* 顶部蓝条高度*/
+              cursor:pointer;
+            }
+            .menu-list {
+              display:flex;
+              flex-wrap:nowrap;
+            }
+            .menu-list a {
+              flex:1;
+              padding:7px 0;  /* PC端横向菜单高度 */
+              color:purple;
+              text-decoration:none;
+                border:none;
+
+            }
+
+            @media (max-width:768px) {
+              .hamburger {
+                display:inline-block;
+              }
+              .menu-list {
+                display:none;
+                flex-direction:column;
+                width: fit-content;
+                margin:0 auto;
+                background:#40a8ff;
+                border:none;
+              }
+              .menu-list.open {
+                display:flex;
+              }
+              .menu-list a {
+                padding:5px 14px; 
+                border-top:0px solid #fff;
+              }
+            }
+            .menu-list.show {
+  display:flex;
+}
+
+/* 导航悬停框 */
+.menu-list a,
+.nav-pc ul li a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.25s;
+}
+.menu-list a:hover,
+.nav-pc ul li a:hover {
+  background-color: #409eff;
+  color: #fff;
+  border-radius: 4px;
+}
+
+@media (min-width:768px) {
+  ...
+}
+
+
+            /* 屏幕小于768px（手机）自动生效 */
+
+            @media (max-width:768px) {
+
+                body {
+
+                    font-size:18px;
+
+                }   
+
+                nav a {
+
+                    display:block;
+
+                }
+
+            }
+
+            @media (max-width:768px) {
+
+
+                nav a {
+
+                    display: block;
+
+                    text-align: center;
+
+                    padding:4px 0;
+
+                }
+
+
+                body {
+
+                    font-size:17px;}
+
+                /* a {
+            
+                    display:block;
+            
+                    text-align:center;
+            
+                    padding:3px 0;
+            
+                } */
+        </style>
+        <script>           document.addEventListener('contextmenu', function(e) {
+
+                e.preventDefault();
+
+            });
+        </script>
+        <style>
+@media (max-width:768px) {
+    input[type="reset"] {
+        display: block; 
+        width: 72px; 
+        box-sizing: border-box; 
+        margin: 10px auto; 
+        padding: 8px 0;  
+    }
+}    
+        </style>
+        <script>           document.addEventListener('keydown', function(e) {
+                // 检查Ctrl键和U键是否同时按下
+
+                if (e.ctrlKey && (e.keyCode === 85)) {
+
+                    e.preventDefault();
+
+                }
+
+            });
+        </script>
+    </head>
+    <body>
+        <div class="nav-wrap">
+            <button class="hamburger" id="menuBtn">☰</button>
+<div class="menu-list" id="menuList">
+            <a href="index.html">首页</a> 
+<a href="liuyan.html">留言</a> 
+<a href="photo.html">相册</a> 
+<a href="video.html">视频展示</a> 
+<a href="download.html">资源分享</a> 
+<a href="bmfile.html">秘密花园</a>
+</div>
+        </div>
+        <br> <br> <br> <br>
+        <center>
+
+<h1>请使用正确的打开方式</h1>
+<h2>非常抱歉，此页面不存在，去其它地方看看吧！</h2>
+
+<br> <br>
+            <hr>
+            <a href="jszc.html">
+            <hl>skyfly 版权所有</hl>
+            </a>
+        </center>
+        <script>
+            const btn = document.getElementById('menuBtn');
+            const menu = document.getElementById('menuList');
+            btn.onclick = function(){
+              menu.classList.toggle('open');
+            }
+        </script>
+    </body>
 </html>
