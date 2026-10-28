@@ -17,7 +17,7 @@
 }
 
 .modal {
-  display: none !important;
+  display: none;
   position: fixed;
   z-index: 9999; 
   left: 0;
