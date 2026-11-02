@@ -335,6 +335,96 @@
                 z-index: 100;
             
             }
+
+ /* 进入公告栏按钮 */
+.notice-capsule {
+  position: relative;
+  width: 15%;
+  max-width: 720px;
+  min-width: 280px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -12px;
+  z-index: 10;
+  height: 40px;
+  padding: 0 16px 0 0;
+  border: 2px solid #111;
+  border-radius: 999px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+  text-decoration: none;}
+.notice-capsule .strip {
+  width: 55%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    -45deg,
+    #ffd400,
+    #ffd400 4px,
+    #111 4px,
+    #111 8px);
+  margin-right: 10px;}
+.notice-capsule .text {
+  font-size: 25px;
+  font-weight: 700;
+  color: #111;}
+.notice-capsule:hover { transform: translateX(-50%) scale(1.04); }
+@media (max-width:768px) {
+  .notice-bar {
+    width: 50%;}
+  .text-part {
+    font-size: 5px;
+    padding: 5px 5px;}
+}
+    
+/* 自我宣传横幅 */
+.ad-style-card{
+  width:80%;
+  max-width:980px;
+  margin:28px auto;
+  background:#f8fbff;
+  border:1px solid #d8e8ff;
+  border-radius:14px;
+  padding:32px 24px;
+  text-align:center;
+  position:relative;
+}
+.ad-top-tag{
+  display:inline-block;
+  background:#4096ff;
+  color:#fff;
+  font-size:13px;
+  padding:3px 12px;
+  border-radius:999px;
+  margin-bottom:16px;
+}
+.ad-title{
+  font-size:22px;
+  color:#222;
+  font-weight:bold;
+  margin-bottom:14px;
+}
+.ad-desc{
+  font-size:15px;
+  color:#555;
+  line-height:1.8;
+}
+.ad-line{
+  width:60px;
+  height:2px;
+  background:#4096ff;
+  margin:22px auto;
+}
+.ad-bottom{
+  display:flex;
+  justify-content:space-between;
+  font-size:14px;
+  color:#777;
+  padding:0 10px;
+}
         </style>  
         <script src="https://hm.baidu.com/hm.js?530ce8b4ecdbe8e833f9f2c545ce6ecf"></script>
         <script>
@@ -368,8 +458,12 @@
         </div>
         <br>
         <center><img src="https://img.zcool.cn/community/01b3b25b9e6713a8012099c8ad6c69.jpg@1280w_1l_2o_100sh.jpg " height="409" width="811"></center>
-        <br><br><br>
+        <br>
         <center>
+            <a href="gg.html" class="notice-capsule">
+  <span class="strip"></span>
+  <span class="text">📢 公告栏</span>
+</a><br><br><br>
             <div class="feature" style="border:none; height:10px; color:#C4B0FF; font-size:28px; font-weight:bold">
                 <noscript>
                     <p>前往浏览器设置里启用JavaScript权限查看当前时间。</p>
@@ -481,33 +575,23 @@
             <p style="text-align: left;justify-content: center;align-items: center;width: 60%;">⑫少年应有鸿鹄志，当骑骏马踏平川。</p>
         </center>
         <a href="#content" id="backToTop"><img src="https://s21.ax1x.com/2024/08/13/pApoHc4.jpg" height="20" width="20">回到顶部</a> <br><br><br>
-        <div style="
-        background: linear-gradient(to right, rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5));    
-        border:none;
-        height:1565px;">
-            <center><img src="https://s21.ax1x.com/2024/08/13/pApczQ0.jpg" height="50" width="100%"></center>
-            <br><br>
-            <font color="#DC143C">
-                <center>
-                    <h1>公 告</h1>
-                </center>
-            </font>
-            <br><br>
-            <h3>📌 声明</h3>
-            <p>Hello！这里是由我本人于2020年自主搭建的个人网站，网页设计风格来源于我在大学本科实践课程时期（即2017年左右）的基础成果。本站的更多内容和功能会不定期维护、更新，保持期待吧！同时也希望各位宾朋能够通过本站了解到我个人的圈子与喜好，欢迎围观捧场。Thanks!!!</p>
-            <br>
-            <h3>✍️ 签名</h3>
-            <p>不奋斗的人生跟咸鱼有什么区别？追逐梦想的道路上绝不回头！</p>
-            <br>
-            <h3>🗒️ 近况</h3>
-            <p>由我本人2025年开始认认真真创作的网络纪传体小说《黄金屋里的老太爷》现已全部完结，请在首发平台起点中文网搜索，欢迎大家阅读评论，感谢大家支持！</p>
-            <br>
-            <h3>💡 温馨提示</h3>
-            <p>1.本站在各大移动端及PC端浏览器（包括知乎、支付宝、微信等APP）中通常均可运行，如果网页出现无法适配手机、平板电脑等移动端屏幕的情况，建议在电脑端浏览器获得更佳的体验。</p>
-            <p>2.如果用户有发现异常、优化建议、网站满意度等相关问题或者想法，可以通过“留言”向我反馈！“留言”板块可能需要收集用户的少量相关信息，并且发送到我的个人邮箱，如有介意，请仔细辨别，谨慎操作！</p>
-            <p>3.经站长深思熟虑，因技术瓶颈和内容量少，暂不开发和上线站内搜索功能。访客朋友们可以在<u>PC端网页使用Ctrl+F</u>快捷键检索想要的内容，<u>移动端</u>的访客可以使用浏览器可能自带的<u>页内查找</u>功能。</p>
-            <br><br>
-        </div>
+        <br><br>
+<div class="ad-style-card">
+  <div class="ad-top-tag">我的云端家园</div>
+  <h3 class="ad-title">
+签名
+  </h3>
+  <p class="ad-desc">
+不奋斗的人生跟咸鱼有什么区别？
+<br>
+追逐梦想的道路上绝不回头！
+      </p>
+  <div class="ad-line"></div>
+  <div class="ad-bottom">
+    <span>skyfly · 翔哥</span>
+    <span>持续记录我的所见、所想、所热爱</span>
+  </div>
+</div>
         <br>
         <hr>
         <center>
