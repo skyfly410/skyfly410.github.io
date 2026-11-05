@@ -137,6 +137,14 @@ document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
 //    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
 //}
 </script>
+<!-- 右键菜单禁用脚本 -->
+  <script>
+    document.addEventListener('contextmenu', event => {
+      if (event.target.tagName === 'IMG') {
+        event.preventDefault();
+      }
+    });
+  </script>
 <noscript>
   <meta http-equiv="refresh" content="0;url=nojs.html">
 </noscript>
