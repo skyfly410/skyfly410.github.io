@@ -266,14 +266,14 @@
 <select name="性别" class="my-select" required=""> <option value="">请选择您的性别</option> <option value="男">男</option> <option value="女">女</option> </select><br><br>
 
 <b><label>照片/头像/截图文件（选填）:</label></b><br>
-<input type="file" name="图片" accept="image/*">
+<input type="file" title="请上传一张图片" name="图片" accept="image/*">
 <p style="color:red;">重要提醒：图片总大小不能超过10MB，否则留言失败！</p><br><br>
 
 <b><label>手机号码:</label></b><br>
-<input type="tel" name="手机号" placeholder="您的常用手机号（选填）" style="width: 300px;padding:6px;"><br><br>
+<input type="tel" name="手机号" pattern="\d*" title="只能输入数字，不能包含其他字符" placeholder="您的常用手机号（选填）" style="width: 300px;padding:6px;"><br><br>
 
 <b><label>电子邮箱:</label></b><br>
-<input type="email" name="邮箱" placeholder="您的任意一个Email（选填）" style="width: 300px;padding:6px;"><br><br>
+<input type="email" name="邮箱" pattern="[A-Za-z0-9]+" title="只能输入字母和数字" placeholder="您的任意一个Email（选填）" style="width: 300px;padding:6px;"><br><br>
 
 <b><label>留言内容:</label></b><br>
 <textarea name="内容" placeholder="说出您的心中所想吧！比如优化建议或者想法......" rows="6" style="width: 350px;padding:6px;" required=""></textarea><br><br>
