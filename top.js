@@ -1,5 +1,5 @@
 // 选择“回到顶部”按钮
-const backToTopBtn = document.getElementById('backTopBtn');
+const backToTopBtn = document.getElementById('backToTop');
 
 // 监听滚动事件
 window.addEventListener('scroll', () => {
