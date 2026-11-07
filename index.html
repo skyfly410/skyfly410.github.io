@@ -436,6 +436,53 @@
   text-decoration: none;
   color: #C4B0FF;
 }
+
+/* ===== 轮播模块样式 ===== */
+.home-slide-box {
+  width: 100%;
+  max-width: 100%;
+  margin: 30px auto;
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+.slide-wrap {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+.slide-item {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+.slide-item.active {
+  opacity: 1;
+}
+/* 底部圆点 */
+.dot-box {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap:8px;
+}
+.dot {
+  width: 10px;
+  height:10px;
+  border-radius: 50%;
+  background: #ffffff70;
+}
+.dot.active {
+  background: #fff;
+}
         </style>  
         <script src="https://hm.baidu.com/hm.js?530ce8b4ecdbe8e833f9f2c545ce6ecf"></script>
         <script>
@@ -468,7 +515,23 @@
 </div>
         </div>
         <br>
-        <center><img src="master/img/南京晚霞.jpg" height="409" width="811"></center>
+        <center>
+
+<!-- 轮播区块 -->
+<div class="home-slide-box">
+  <div class="slide-wrap">
+<img src="master/img/南京晚霞.jpg" class="slide-item active">
+<img src="master/img/南京晚霞.jpg" class="slide-item">
+<img src="master/img/南京晚霞.jpg" class="slide-item">
+  </div>
+  <div class="dot-box">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</div>
+
+</center>
         <br>
             <a href="gg.html" class="notice-capsule">
   <span class="strip"></span>
@@ -631,5 +694,25 @@
               menu.classList.toggle('open');
             }
         </script>
+
+<script>
+const items = document.querySelectorAll('.slide-item');
+const dots = document.querySelectorAll('.dot');
+let cur = 0;
+let timer;
+
+function changeSlide(){
+  items[cur].classList.remove('active');
+  dots[cur].classList.remove('active');
+  cur = (cur + 1) % items.length;
+  items[cur].classList.add('active');
+  dots[cur].classList.add('active');
+}
+timer = setInterval(changeSlide, 6000);
+
+const box = document.querySelector('.home-slide-box');
+box.onmouseenter = ()=> clearInterval(timer);
+box.onmouseleave = ()=> timer = setInterval(changeSlide,6000);
+</script>
     </body>
 </html>
