@@ -892,7 +892,7 @@ exports.init = init;
                 const { isSuccessful } = await staticrypt.handleDecryptionOfPage(password, isRememberChecked);
 
                 if (!isSuccessful) {
-                    alert(templateError);
+                    alert('请认真输入，要不然我就不给你看了，满足不了你的好奇心了！');
                 }
             });
         </script>
