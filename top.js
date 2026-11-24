@@ -1,4 +1,4 @@
-// 选择“回到顶部”按钮
+// “回到顶部”按钮
 const backToTopBtn = document.getElementById('backToTop');
 
 // 监听滚动事件
@@ -10,14 +10,14 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// 拖动相关变量
+// 拖动的相关变量
 let isDrag = false;
 let startX = 0;
 let startY = 0;
 let btnLeft = 0;
 let btnTop = 0;
 
-// 监听“拖动按钮”的触摸开始 / 鼠标按下
+// 监听按钮被拖动时候的触摸开始或者鼠标点击
 backToTopBtn.addEventListener('mousedown', startDrag);
 backToTopBtn.addEventListener('touchstart', startDrag, { passive: true });
 
@@ -79,7 +79,7 @@ function endDrag(e) {
   const disX = Math.abs(touch.clientX - startX);
   const disY = Math.abs(touch.clientY - startY);
 
-  // 只有移动很小，才算点击返回顶部
+  // 只有移动很小，才算返回顶部
   if (disX < 12 && disY < 12) {
     window.scrollTo({
       top: 0,
