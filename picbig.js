@@ -1,4 +1,4 @@
-// picbig.js
+// 缩略图片查看详情功能
 var modal = document.getElementById("myModal");
 var img = document.getElementById("img01");
 var modalImg = document.getElementsByClassName("image");
@@ -15,7 +15,7 @@ function openModal(event) {
   captionText.innerHTML = this.alt;
 }
 
-// 点击关闭按钮时执行的函数
+// 关闭按钮时执行的函数
 function closeModal() {
   modal.style.display = "none";
 }
@@ -35,7 +35,6 @@ images.forEach(function(image) {
 // 关闭按钮的点击事件
 closeBtn.onclick = closeModal;
 
-// 阻止长按保存图片和阻止上下文菜单
 document.addEventListener('DOMContentLoaded', function() {
     var imageContainers = document.querySelectorAll('.image-container');
 
