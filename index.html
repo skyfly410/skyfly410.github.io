@@ -36,10 +36,8 @@
             
             /* 设置表格背景色及响应式布局样式 */
             
-            tr.highlighted {
-            
+            tr.highlighted { 
               background-color:#D0F0C0;
-            
             }
             
             .table-wrap {
@@ -52,7 +50,7 @@
               max-width: 1000px;  
               border-collapse: collapse;
               border: none !important;
-            margin:3px;}
+              margin:3px;}
 
             th, td {
               border: 1px solid #222;
@@ -143,13 +141,13 @@
 }
 
 @media (min-width:768px) {
-  ...
-          
+  ...     
               img {
                 max-width:100%;
                 height:auto;
               }
             }
+
 
            /* 屏幕小于768px（手机）自动生效 */
 
@@ -206,14 +204,6 @@ body {
               width: 95%;
             
               margin: 0 auto;
-            
-            }
-            
-            .box img {
-            
-              width: 100%;
-            
-              display: block;
             
             }
             
@@ -645,5 +635,5 @@ const box = document.querySelector('.home-slide-box');
 box.onmouseenter = ()=> clearInterval(timer);
 box.onmouseleave = ()=> timer = setInterval(changeSlide,6000);
 </script>
-    </body>
+</body>
 </html>
