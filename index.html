@@ -5,24 +5,13 @@
 <link rel="stylesheet" href="hr.css">
         <meta charset="utf-8">
         <style type="text/css">
-            a:link,a:visited{
-            
-             text-decoration:none; 
-            
-            }
-            
-            a:hover{
-            
-             text-decoration:none; 
-            
-            }
             
              /* 移除链接的所有下划线 */
             
-                    a, a:hover, a:active {
-            
-                        text-decoration: none;
-            
+                    a, a:link, a:visited, a:hover, a:active {
+
+                    text-decoration: none;
+
                     }
             
              /* 设置链接的默认颜色 */
@@ -45,7 +34,7 @@
             
                     * {font-family:'kaiti';}
             
-            /* 设置表格背景色 */
+            /* 设置表格背景色及主要样式 */
             
             tr.highlighted {
             
@@ -57,14 +46,14 @@
               width:100%;
               overflow-x:auto;
             }
-            
-            
+                        
             table {
               width: 100%;
               max-width: 1000px;  
               border-collapse: collapse;
               border: none !important;
             margin:3px;}
+
             th, td {
               border: 1px solid #222;
               padding: 9px 6px;
@@ -163,7 +152,9 @@
                 height:auto;
               }
             }
-            
+
+           /* 屏幕小于768px（手机）自动生效 */
+
             @media (max-width:768px) {
             
                 body {
@@ -172,22 +163,11 @@
             
                 }
 
-            
                 img {
             
                     max-width: 100%;
             
                     height: auto;
-            
-                }
-            
-                table {
-            
-                    width: 100%;
-            
-                    font-size:14px;
-            
-                    border-collapse:collapse;
             
                 }
             }
@@ -220,6 +200,8 @@ body {
                     text-align: center;
                     
                     vertical-align:middle;
+
+                    border-collapse:collapse;
                 }
             
             .box {
