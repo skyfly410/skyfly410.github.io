@@ -41,7 +41,15 @@
                     * {font-family:'kaiti';}
         </style>
 <style>
- img {max-width:100%;height:auto;}
+ /* 警示斜纹条完整样式 */  
+.warning-strip {    
+height: 18px;    
+background: repeating-linear-gradient(      
+-45deg,      
+#f2c230 0, #f2c230 18px,      
+#2b2b2b 18px, #2b2b2b 36px    
+);  
+}
 
 .back-box{
   text-align:center;
@@ -65,7 +73,7 @@
         height:1550px;
         
         ">
-            <center><img src="https://s21.ax1x.com/2024/08/13/pApczQ0.jpg" height="50" width="100%"></center>
+            <div class="warning-strip" role="img" aria-label="警示条"></div>
             <br><br>
             <font color="#b82222">
                 <center>
